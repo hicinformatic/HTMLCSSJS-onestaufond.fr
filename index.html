@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--
+                                                                     88          88  ad88888ba   
+                                                                     ""          88 d8"     "8b  
+                                                                                 88 ""      a8P  
+8b,dPPYba,  ,adPPYYba, 8b,dPPYba, ,adPPYYba, 8b,dPPYba,   ,adPPYba,  88  ,adPPYb,88      ,a8P"   
+88P'    "8a ""     `Y8 88P'   "Y8 ""     `Y8 88P'   `"8a a8"     "8a 88 a8"    `Y88     d8"      
+88       d8 ,adPPPPP88 88         ,adPPPPP88 88       88 8b       d8 88 8b       88     ""       
+88b,   ,a8" 88,    ,88 88         88,    ,88 88       88 "8a,   ,a8" 88 "8a,   ,d88     aa       
+88`YbbdP"'  `"8bbdP"Y8 88         `"8bbdP"Y8 88       88  `"YbbdP"'  88  `"8bbdP"Y8     88       
+88                                                                                               
+88 
+-->
+<html lang="fr">
+    <!-- meta, title & css -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+        <title>OEAF | Login</title>
+        <link rel="stylesheet" type="text/css" href="css/wr-easy.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div id="tothetop"></div>
+        <aside id="asideMain" class="wr-txt-center">
+            <a href="#"><img alt="desciption" src="img/theme/gamepad.svg"></a>
+            <input type="checkbox" id="ShortcutInfo" class="wr-display-none">
+            <div class="wr-blockdiscover">
+                <table>
+                    <tr><th colspan="2">Temps réel</th></tr>
+                    <tr>
+                        <td>En ligne</td><td>(0)</td>
+                    </tr>
+                    <tr>
+                        <td>En jeu</td><td>(0)</td>
+                    </tr>
+                    <tr>
+                        <td>Teamspeak</td><td id="teamspeak3_nbruser"></td>
+                    </tr>
+                    <tr>
+                        <td>Chat</td><td>(0)</td>
+                    </tr>
+                </table>
+            </div>
+            <label for="ShortcutInfo"><img alt="desciption" src="img/theme/info.svg"></label>
+            <a href="#tothetop"><img alt="desciption" src="img/theme/arrow_up.svg"></a>
+            <a href="#tothebot"><img alt="desciption" src="img/theme/arrow_down.svg"></a>
+        </aside>
+
+<!--
+88        88                                88                        
+88        88                                88                        
+88        88                                88                        
+88aaaaaaaa88  ,adPPYba, ,adPPYYba,  ,adPPYb,88  ,adPPYba, 8b,dPPYba,  
+88""""""""88 a8P_____88 ""     `Y8 a8"    `Y88 a8P_____88 88P'   "Y8  
+88        88 8PP""""""" ,adPPPPP88 8b       88 8PP""""""" 88          
+88        88 "8b,   ,aa 88,    ,88 "8a,   ,d88 "8b,   ,aa 88          
+88        88  `"Ybbd8"' `"8bbdP"Y8  `"8bbdP"Y8  `"Ybbd8"' 88 
+-->
+        <header id="headerMain">
+
+            <!-- BEGIN Main Menu -->
+            <nav id="Menu">
+                <input id="discoverMenu" class="wr-display-none" type="checkbox">
+                <label for="discoverMenu" class="wr-menudiscover wr-only-sm wr-only-md wr-txt-right">
+                    <span class="wr-streak">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </label>
+                <div id="Main" class="wr-block wr-inline-lg wr-txt-center">
+                    <a class="active" href="index.html">Accueil</a><!--
+                 --><a href="members.html">Membres</a>
+                </div>
+            </nav>
+            <!-- END Main Menu -->
+
+            <!-- BEGIN Breadcrumb & Login -->
+            <nav id="UnderMenu" class="wr-inline">
+                <div id="Breadcrumb">
+                    <a href="#">Accueil</a>
+                </div><!--
+             --><div id="Shortcuts" class="wr-txt-right">
+                    <a href="login.html">Login</a>
+                </div>
+            </nav>
+            <!-- END Breadcrumb & Login -->
+
+        </header>
+
+<!--
+ ad88888ba                                88                          
+d8"     "8b                         ,d    ""                          
+Y8,                                 88                                
+`Y8aaaaa,    ,adPPYba,  ,adPPYba, MM88MMM 88  ,adPPYba,  8b,dPPYba,   
+  `"""""8b, a8P_____88 a8"     ""   88    88 a8"     "8a 88P'   `"8a  
+        `8b 8PP""""""" 8b           88    88 8b       d8 88       88  
+Y8a     a8P "8b,   ,aa "8a,   ,aa   88,   88 "8a,   ,a8" 88       88  
+ "Y88888P"   `"Ybbd8"'  `"Ybbd8"'   "Y888 88  `"YbbdP"'  88       88 
+-->
+       <section id="news" class="wr-width50">
+            <h1>News</h1>
+
+            <a class="article wr-block" href="#">
+                <article class="wr-fill">
+                    <div class="wr-width20 art-miniature" style="background-image: url(img/example.jpg);"></div><!--
+                 --><div class="wr-width5"></div><!--
+                 --><div class="wr-width75">
+                        <h2>Article 1</h2>
+                        <div>content</div>
+                        <footer>By, date,</footer>
+                    </div>
+                </article>
+            </a>
+
+            <a class="article wr-block" href="#">
+                <article class="wr-fill">
+                    <div class="wr-width20 art-miniature" style="background-image: url(img/example.jpg);"></div><!--
+                 --><div class="wr-width5"></div><!--
+                 --><div class="wr-width75">
+                        <h2>Article 1</h2>
+                        <div>content</div>
+                        <footer>By, date,</footer>
+                    </div>
+                </article>
+            </a>
+	</section>
+
+        <section id="servers">
+            <h1>Servers</h1>
+
+            <!-- Teamspeak 3-->
+            <a class="article wr-block" href="ts3server://onestaufond.fr?password=guigne26%21">
+                <article class="wr-txt-center">
+                    <div class="wr-break1"></div>
+                    <h2>Teamspeak 3</h2>
+                    <div class="wr-inline-lg wr-inline-md">
+                        <div>
+                            <img src="img/logo/teamspeak3.png" alt="Teamspeak 3" />
+                        </div><!--
+                     --><div>
+                            <div>
+                                <p><b>Serveur Teamspeak 3</b></p>
+                                <p>Domaine: <i>onestaufond.fr</i></p>
+                                <p>IP: <i>91.121.94.47</i></p>
+                            </div>
+                        </div><!--
+                     --><div>
+                            <img src="http://status.onestaufond.fr/teamspeak3.svg" alt="Teamspeak 3" />
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Multifive -->
+            <a class="article wr-block" href="#">
+                <article class="wr-txt-center">
+                    <div class="wr-break1"></div>
+                    <h2>Counter-Strike: Global Offensive</h2>
+                    <div class="wr-inline-lg wr-inline-md">
+                        <div>
+                            <img src="img/logo/gtav.png" alt="GTA 5" />
+                        </div><!--
+                     --><div>
+                            <div>
+                                <p><b>Grand Theft Auto V</b></p>
+                                <p>Domaine: <i>onestaufond.fr</i></p>
+                                <p>IP: <i>91.121.94.47</i></p>
+                            </div>
+                        </div><!--
+                     --><div>
+                            <img src="http://status.onestaufond.fr/multifive.svg" alt="Grand Theft Auto V" />
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Space Engineers -->
+            <a class="article wr-block" href="steam://connect/212.83.166.9:27016">
+                <article class="wr-txt-center">
+	            <div class="wr-break1"></div>
+	            <h2>Space Engineers</h2>
+	            <div class="wr-inline-lg wr-inline-md">
+	                <div>
+	                    <img src="img/logo/spaceengineers.png" alt="Space Engineers" />
+	                </div><!--
+	             --><div>
+	                    <div>
+	                        <p><b>Space Engineers</b></p>
+	                        <p>Domaine: <i>grandnuagedemagellan.fr</i></p>
+	                        <p>IP: <i>212.83.166.9:27016</i></p>
+	                   </div>
+	                </div><!--
+                     --><div>
+                            <img src="status/external.svg" alt="Status Space Engineers" />
+                        </div>
+                    </div>
+                </article>
+	    </a>
+
+            <!-- CS:GO-->
+            <a class="article wr-block" href="#">
+                <article class="wr-txt-center">
+                    <div class="wr-break1"></div>
+                    <h2>Counter-Strike: Global Offensive</h2>
+                    <div class="wr-inline-lg wr-inline-md">
+                        <div>
+                            <img src="img/logo/csgo.png" alt="Teamspeak 3" />
+                        </div><!--
+                     --><div>
+                            <div>
+                                <p><b>Serveur Counter-Strike: Global Offensive</b></p>
+                                <p>Domaine: <i>onestaufond.fr</i></p>
+                                <p>IP: <i>91.121.94.47</i></p>
+                            </div>
+                        </div><!--
+                     --><div>
+                            <img src="http://status.onestaufond.fr/csgo.svg" alt="counter-strikge: global offensive" />
+                        </div>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Minecraft-->
+            <a class="article wr-block" href="#">
+                <article class="wr-txt-center">
+                    <div class="wr-break1"></div>
+                    <h2>Minecraft</h2>
+                    <div class="wr-inline-lg wr-inline-md">
+                        <div>
+                            <img src="img/logo/minecraft.png" alt="Minecraft" />
+                        </div><!--
+                     --><div>
+                            <div>
+                                <p><b>Serveur Minecraft</b></p>
+                                <p>Domaine: <i>onestaufond.fr</i></p>
+                                <p>IP: <i>91.121.94.47</i></p>
+                            </div>
+                        </div><!--
+                     --><div>
+                            <img src="http://status.onestaufond.fr/minecraft.svg" alt="Teamspeak 3" />
+                        </div>
+                    </div>
+                </article>
+            </a>
+        </section>
+
+        <section id="tools">
+            <h1>Tools</h1>
+            
+            <div class="wr-inline-lg">
+
+                <!-- Teamspeak 3-->
+                <a class="article" href="#">
+                    <article class="wr-txt-center">
+                        <img src="img/evolve.svg" alt="Evolutions" />
+                        <h2>Evolutions</h2>
+                        <div>Proposer une nouvauté!</div>
+                        <footer></footer>
+                    </article>
+                </a><!--
+
+                Evolution
+             --><a class="article" href="#">
+                    <article class="wr-txt-center">
+                        <img src="img/like.svg" alt="Ameliorations" />
+                        <h2>Améliorations</h2>
+                        <div>Proposer une amélioration!</div>
+                        <footer></footer>
+                    </article>
+                </a><!--
+
+                Bug&Error
+             --><a class="article" href="#">
+                    <article class="wr-txt-center">
+                        <img src="img/error.svg" alt="Rapporter une erreur" />
+                        <h2>Bugs</h2>
+                        <div>Rapporter une erreur!</div>
+                        <footer></footer>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+
+<!--
+88888888888                                                  
+88                               ,d                          
+88                               88                          
+88aaaaa  ,adPPYba,   ,adPPYba, MM88MMM ,adPPYba, 8b,dPPYba,  
+88""""" a8"     "8a a8"     "8a  88   a8P_____88 88P'   "Y8  
+88      8b       d8 8b       d8  88   8PP""""""" 88          
+88      "8a,   ,a8" "8a,   ,a8"  88,  "8b,   ,aa 88          
+88       `"YbbdP"'   `"YbbdP"'   "Y888 `"Ybbd8"' 88 
+-->
+        <footer id="footerMain" class="wr-txt-center">
+            <span>onestaufond.fr &copy; all right reserved</span>
+        </footer>
+
+        <div id="tothebot"></div>
+	<script type="text/javascript">
+        function teamspeak3Nbruser() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("teamspeak3_nbruser").innerHTML = "( "+this.responseText +")";
+	        }
+            };
+            xhttp.open("GET", "http://data.onestaufond.fr/teamspeak3_nbruser.txt", true);
+            xhttp.send();
+        }
+        teamspeak3Nbruser();
+	</script>
+    </body>
+</html>
