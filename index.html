@@ -16,36 +16,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
-        <title>OEAF | Login</title>
+        <title>onestaufond.fr</title>
         <link rel="stylesheet" type="text/css" href="css/wr-easy.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body>
-        <div id="tothetop"></div>
-        <aside id="asideMain" class="wr-txt-center">
-            <a href="#"><img alt="desciption" src="img/theme/gamepad.svg"></a>
-            <input type="checkbox" id="ShortcutInfo" class="wr-display-none">
-            <div class="wr-blockdiscover">
-                <table>
-                    <tr><th colspan="2">Temps réel</th></tr>
-                    <tr>
-                        <td>En ligne</td><td>(0)</td>
-                    </tr>
-                    <tr>
-                        <td>En jeu</td><td>(0)</td>
-                    </tr>
-                    <tr>
-                        <td>Teamspeak</td><td id="teamspeak3_nbruser"></td>
-                    </tr>
-                    <tr>
-                        <td>Chat</td><td>(0)</td>
-                    </tr>
-                </table>
-            </div>
-            <label for="ShortcutInfo"><img alt="desciption" src="img/theme/info.svg"></label>
-            <a href="#tothetop"><img alt="desciption" src="img/theme/arrow_up.svg"></a>
-            <a href="#tothebot"><img alt="desciption" src="img/theme/arrow_down.svg"></a>
-        </aside>
+    <body class="bg-gray">
 
 <!--
 88        88                                88                        
@@ -57,42 +32,45 @@
 88        88 "8b,   ,aa 88,    ,88 "8a,   ,d88 "8b,   ,aa 88          
 88        88  `"Ybbd8"' `"8bbdP"Y8  `"8bbdP"Y8  `"Ybbd8"' 88 
 -->
-        <header id="headerMain">
-
-            <!-- BEGIN Main Menu -->
-            <nav id="Menu">
-                <input id="discoverMenu" class="wr-display-none" type="checkbox">
-                <label for="discoverMenu" class="wr-menudiscover wr-only-sm wr-only-md wr-txt-right">
-                    <span class="wr-streak">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </label>
-                <div id="Main" class="wr-block wr-inline-lg wr-txt-center">
-                    <a class="active" href="index.html">Accueil</a><!--
-                 --><a href="members.html">Membres</a><!--
-                 --><a href="servers.html">Serveurs</a>
-                </div>
-            </nav>
-            <!-- END Main Menu -->
-
-            <!-- BEGIN Breadcrumb & Login -->
-            <nav id="UnderMenu" class="wr-inline">
-                <div id="Breadcrumb">
-                    <a href="#">Accueil</a>
+        <header>
+            <nav id="mainMenu" class="wr-lg-display-inline1 wr-txt-centerR bg-grayD5">
+                <div class="wr-width20 wr-md-display-block wr-sm-display-block">
+                    <div class="wr-md-display-inline1 wr-sm-display-inline1 wr-valign-middleR">
+                        <a href="#" class="wr-width20 wr-display-block cl-cyan bg-cyan-hv cl-gray-hv">Home</a><!--
+                    --><label for="discoverMenu" class="wr-width80 wr-sm-display-inline wr-md-display-inline">
+                            <span class="wr-streak">
+                                <span></span>
+                                <span class="bg-cyan"></span>
+                                <span ></span>
+                                <span class="bg-cyan"></span>
+                                <span></span>
+                                <span class="bg-cyan"></span>
+                                <span></span>
+                            </span>
+                        </label>
+                    </div>
                 </div><!--
-             --><div id="Shortcuts" class="wr-txt-right">
-                    <a href="login.html">Login</a>
+            --><div class="wr-width80">
+                    <input id="discoverMenu" class="wr-sm-discover wr-md-discover wr-display-none" type="checkbox">
+                    <div class="wr-lg-display-inline1 wr-widthauto wr-md-display-block1 wr-sm-display-block1">
+                       <a href="#" class="cl-cyan bg-cyan-hv cl-gray-hv">Membres</a><!--
+                    --><a href="#" class="cl-cyan bg-cyan-hv cl-gray-hv">Profile</a>
+                    </div>
                 </div>
             </nav>
-            <!-- END Breadcrumb & Login -->
-
         </header>
+
+        <aside id="barRight" class="wr-baraside-right wr-display-block1 bg-grayL1">
+            <a class="bg-grayL2 bg-grayL3-hv" href="logoff.html">
+                <img class="h32" src="img/commons/poweroff.svg">
+            </a>
+            <a class="bg-grayL2 bg-grayL3-hv" href="http://status.onestaufond.fr">
+                <img class="h32" src="img/pictos/heartbeat.svg">
+            </a>
+            <a class="bg-grayL2 bg-grayL3-hv" href="ts3server://onestaufond.fr?port=9987">
+                <img class="h32" src="img/commons/microphone.svg">
+            </a>
+        </aside>
 
 <!--
  ad88888ba                                88                          
@@ -104,95 +82,22 @@ Y8,                                 88
 Y8a     a8P "8b,   ,aa "8a,   ,aa   88,   88 "8a,   ,a8" 88       88  
  "Y88888P"   `"Ybbd8"'  `"Ybbd8"'   "Y888 88  `"YbbdP"'  88       88 
 -->
-       <section id="news" class="wr-width50">
-            <h1>News</h1>
+       <section>
+           <h1>Last News</h1>
 
-            <a class="article wr-block" href="#">
-                <article class="wr-fill">
-                    <div class="wr-width20 art-miniature" style="background-image: url(img/example.jpg);"></div><!--
-                 --><div class="wr-width5"></div><!--
-                 --><div class="wr-width75">
-                        <h2>Article 4</h2>
-                        <div>content</div>
-                        <footer>By, date,</footer>
-                    </div>
-                </article>
-            </a>
+           <article class="wr-mrg-bottom10 bg-grayL1">
+               <h2 class="bg-grayD4 cl-cyanD1">Title</h2>
+               <div>Content</div>
+               <footer>By</footer>
+           </article>
 
-            <a class="article wr-block" href="#">
-                <article class="wr-fill">
-                    <div class="wr-width20 art-miniature" style="background-image: url(img/example.jpg);"></div><!--
-                 --><div class="wr-width5"></div><!--
-                 --><div class="wr-width75">
-                        <h2>Article 3</h2>
-                        <div>content</div>
-                        <footer>By, date,</footer>
-                    </div>
-                </article>
-            </a>
+           <article class="wr-mrg-bottom10 bg-grayL1">
+               <h2 class="bg-grayD4 cl-cyanD1">Title</h2>
+               <div>Content</div>
+               <footer>By</footer>
+           </article>
 
-            <a class="article wr-block" href="#">
-                <article class="wr-fill">
-                    <div class="wr-width20 art-miniature" style="background-image: url(img/example.jpg);"></div><!--
-                 --><div class="wr-width5"></div><!--
-                 --><div class="wr-width75">
-                        <h2>Article 2</h2>
-                        <div>content</div>
-                        <footer>By, date,</footer>
-                    </div>
-                </article>
-            </a>
-
-            <a class="article wr-block" href="#">
-                <article class="wr-fill">
-                    <div class="wr-width20 art-miniature" style="background-image: url(img/example.jpg);"></div><!--
-                 --><div class="wr-width5"></div><!--
-                 --><div class="wr-width75">
-                        <h2>Article 1</h2>
-                        <div>content</div>
-                        <footer>By, date,</footer>
-                    </div>
-                </article>
-            </a>
-        </section>
-
-        <section id="tools">
-            <h1>Tools</h1>
-            
-            <div class="wr-inline-lg">
-
-                <!-- Teamspeak 3-->
-                <a class="article" href="#">
-                    <article class="wr-txt-center">
-                        <img src="img/evolve.svg" alt="Evolutions" />
-                        <h2>Evolutions</h2>
-                        <div>Proposer une nouvauté!</div>
-                        <footer></footer>
-                    </article>
-                </a><!--
-
-                Evolution
-             --><a class="article" href="#">
-                    <article class="wr-txt-center">
-                        <img src="img/like.svg" alt="Ameliorations" />
-                        <h2>Améliorations</h2>
-                        <div>Proposer une amélioration!</div>
-                        <footer></footer>
-                    </article>
-                </a><!--
-
-                Bug&Error
-             --><a class="article" href="#">
-                    <article class="wr-txt-center">
-                        <img src="img/error.svg" alt="Rapporter une erreur" />
-                        <h2>Bugs</h2>
-                        <div>Rapporter une erreur!</div>
-                        <footer></footer>
-                    </article>
-                </a>
-
-            </div>
-        </section>
+       </section>
 
 <!--
 88888888888                                                  
@@ -204,23 +109,8 @@ Y8a     a8P "8b,   ,aa "8a,   ,aa   88,   88 "8a,   ,a8" 88       88
 88      "8a,   ,a8" "8a,   ,a8"  88,  "8b,   ,aa 88          
 88       `"YbbdP"'   `"YbbdP"'   "Y888 `"Ybbd8"' 88 
 -->
-        <footer id="footerMain" class="wr-txt-center">
-            <span>onestaufond.fr &copy; all right reserved</span>
+        <footer class="cl-cyan">
+            <p class="wr-txt-center">onestaufond.fr © Gyn</p>
         </footer>
-
-        <div id="tothebot"></div>
-	<script type="text/javascript">
-        function teamspeak3Nbruser() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("teamspeak3_nbruser").innerHTML = "( "+this.responseText +")";
-	        }
-            };
-            xhttp.open("GET", "http://data.onestaufond.fr/teamspeak3_nbruser.txt", true);
-            xhttp.send();
-        }
-        teamspeak3Nbruser();
-	</script>
     </body>
 </html>
