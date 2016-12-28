@@ -296,7 +296,7 @@ aside#barRight > a {
     padding: 8px;
     margin-bottom: 1px;
 }
-footer > p:first-child { 
+footer#mainFooter > p:first-child { 
     background-image: url("../img/onestaufond/logo.png");
     background-repeat: no-repeat;
     background-size: contain;
