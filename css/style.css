@@ -304,6 +304,12 @@ footer#mainFooter > p:first-child {
     padding: 0 0 64px 0;
 }
 
+div.content { height: 80px; }
+img.content { max-height: 148px; width: auto; }
+
+@media (min-width: 769px) and (max-width: 992px){
+    section { margin-right: 48px;}
+}
 @media (max-width: 768px){
-    form { margin-right: 45px;}
+    section { margin-right: 48px;}
 }
