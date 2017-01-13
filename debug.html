@@ -86,40 +86,43 @@ Y8a     a8P "8b,   ,aa "8a,   ,aa   88,   88 "8a,   ,a8" 88       88
  "Y88888P"   `"Ybbd8"'  `"Ybbd8"'   "Y888 88  `"YbbdP"'  88       88 
 -->
         <section class="wr lg-c80 md-mrgr50 sm-mrgr50">
-           <h1 class=" wr mrgt10 pad5 bdb2 cl-c bg-gd5 bd-c">Members</h1>
+            <h1 class=" wr mrgt10 pad5 bdb2 cl-c bg-gd5 bd-c">Reporter / Proposer</h1>
 
-            <a href="profile.html">
-                <article class="wr lg-dib1 md-dib1 bd1 vamr mrgt10 bg-gl1 bd-g bd-c-hv cl-cd1">
-                        <h2 class="wr w25 pad4 bg-gd1 dib1 bdr5 bd-c bd-c">
-                            <img class="wr w20 ht16" src="img/commons/user.svg"><!--
-                            --><span class="wr w80">&nbsp;Gyn</span>
-                        </h2><!--
-                    --><div class="wr w75 lg-dib1 md-dib1 sm-dn wa txcr">
-                            <p class="wr-txt-center"><img class="wr ht32" src="img/commons/topic.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/view.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/comments.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/scoring.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/level.svg"><span>&nbsp;(0)</span></p>
+            <article class="wr mrgt10">
+                <h2 class="wr pad5 bg-gd4 cl-c">Formulaire</h2>
+                <form class="wr padb10 bg-gd3 cl-c" action="index.html">
+                    <div class="wr c90">
+                        <div class="wr dib1 padt10 padb10">
+                            <label class="wr w40">Type:&nbsp;</label><!--
+                         --><div class="wr w50 wp00">
+                                <input id="bug" type="radio" name="type"><label for="bug">Bug</label><br>
+                                <input id="ameliorate" type="radio" name="type"><label for="ameliorate">Amélioration</label>
+                            </div>
                         </div>
-                </article>
-            </a>
-
-            <a href="profile.html">
-                <article class="wr lg-dib1 md-dib1 bd1 vamr mrgt10 bg-gl1 bd-g bd-c-hv cl-cd1">
-                        <h2 class="wr w25 pad4 bg-gd1 dib1 bdr5 bd-c bd-c">
-                            <img class="wr w20 ht16" src="img/commons/user.svg"><!--
-                            --><span class="wr w80">&nbsp;Gyn</span>
-                        </h2><!--
-                    --><div class="wr w75 lg-dib1 md-dib1 sm-dn wa txcr">
-                            <p class="wr-txt-center"><img class="wr ht32" src="img/commons/topic.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/view.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/comments.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/scoring.svg"><span>&nbsp;(0)</span></p><!--
-                         --><p class="wr-txt-center"><img class="wr ht32" src="img/commons/level.svg"><span>&nbsp;(0)</span></p>
+                        <div class="wr db1 padt10 padb10">
+                            <label class="wr w40">Email:&nbsp;</label><!--
+                        --><input class="wr w50 wp00">
                         </div>
-                </article>
-            </a>
-
+                        <div class="wr db1 padt10 padb10 bdb2 bd-c">
+                            <label class="wr w40">Description:&nbsp;</label><!--
+                        --><textarea class="wr w50 wp00"></textarea>
+                        </div>
+                        <div class="wr db1 padt10 padb10">
+                            <label class="wr w40">Pièce jointe:&nbsp;</label><!--
+                        --><input class="wr w50 wp00" type="file">
+                        </div>
+                        <div class="wr txc">
+                            <input class="wr wp50 lh32 sm-wp00 bd0 bg-c cl-gd8" type="submit" />
+                        </div>
+                        <div class="wr txr sm-txc mrgt10">
+                            <a class="cl-gl8" href="buglist.html">Liste des bugs</a>
+                        </div>
+                        <div class="wr txr sm-txc mrgt10">
+                            <a class="cl-gl8" href="amleiorate.html">Liste des améliorations</a>
+                        </div>
+                    </div>
+                </form>
+            </article>
         </section>
 
 <!--

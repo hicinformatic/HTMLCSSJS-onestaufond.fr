@@ -267,26 +267,6 @@
 .bg-rl9-hv:hover { background-color: #ffeaea; } .cl-rl9-hv:hover { color: #ffeaea; } .bd-rl9-hv:hover { border-color: #ffeaea; }
 .bg-rl0-hv:hover { background-color: #ffffff; } .cl-rl0-hv:hover { color: #ffffff; } .bd-rl0-hv:hover { border-color: #ffffff; }
 
-nav#mainmenu { z-index: 1; position: relative;}
-nav#mainmenu label { height: 50px;}
-nav#mainmenu a { 
-    line-height: 50px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-aside#barright {padding-top: 50px;}
-aside#barright > a {
-    padding: 8px;
-    margin-bottom: 1px;
-}
-footer#mainfooter > p:first-child { 
-    background-image: url("../img/onestaufond/logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    padding: 0 0 64px 0;
-}
-
+a {text-decoration: none; }
 div.content { height: 80px; }
 img.content { max-height: 148px; width: auto; }
