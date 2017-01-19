@@ -15,12 +15,12 @@ d8'          `8b 88 88    88888888y"'    `"ybbd8"'     "8"     88  `"ybbd8"'  `"
 .wr.vat, .wr.vatr *, .wr.vat1 > * { vertical-align: top; }
 .wr.vam, .wr.vamr *, .wr.vam1 > * { vertical-align: middle; }
 .wr.vab, .wr.vabr *, .wr.vab1 > * { vertical-align: bottom; }
-.wr.db, .wr.dbr *, .wr.db1 > * { display: block; }
+.wr.db,  .wr.dbr *,  .wr.db1 > *  { display: block; }
 .wr.dib, .wr.dibr *, .wr.dib1 > * { display: inline-block; }
-.wr.dt, .wr.dtr *, .wr.dt1 > * { display: table; }
-.wr.db.wr.d, .wr.dbr.wr.d *, .wr.db1.wr.d > * { display: block; }
-.wr.dib.wr.d, .wr.dibr.wr.d *, .wr.dib1.wr.d > * { display: inline-block; }
-.wr.dt.wr.d, .wr.dtr.wr.d *, .wr.dt1.wr.d > *  { display: table; }
+.wr.dt,  .wr.dtr *,  .wr.dt1 > *  { display: table; }
+.wr.db,  .wr.dbr *,  .wr.db1 > *  { display: block; }
+.wr.dib, .wr.dibr *, .wr.dib1 > * { display: inline-block; }
+.wr.dt,  .wr.dtr *,  .wr.dt1 > *  { display: table; }
 .wr.wp0,  .wr.dib1>.wr.w0,  .wr.dibr .wr.w0  { width: 0%;   }
 .wr.wp1,  .wr.dib1>.wr.w1,  .wr.dibr .wr.w1  { width: 1%;   }
 .wr.wp2,  .wr.dib1>.wr.w2,  .wr.dibr .wr.w2  { width: 2%;   }
@@ -107,10 +107,12 @@ input[type="checkbox"].wr.dsc:not(:checked) ~ * { display: none; }
 /* position */
 .wr.pfix { position: fixed; }
 .wr.prlv { position: relative; }
-.wr.brft, .wr.brftr, .wr.brftl { position: fixed; width: 100%; top: 0;    }
-.wr.brfb, .wr.brfbr, .wr.brfbl { position: fixed; width: 100%; bottom: 0; }
-.wr.brfr, .wr.brftr, .wr.brfbr { position: fixed; height: 100%; right: 0; }
-.wr.brfl, .wr.brftl, .wr.brfbl { position: fixed; height: 100%; left: 0;  }
+.wr.brft { position: fixed; width: 100%; top: 0;    }
+.wr.brfb { position: fixed; width: 100%; bottom: 0; }
+.wr.brfl { position: fixed; height: 100%; left: 0;  }
+.wr.brfr { position: fixed; height: 100%; right: 0; }
+.wr.brftl { position: fixed; height: 100%; top:0; left: 0;  }
+.wr.brftr { position: fixed; height: 100%; top:0; right: 0; }
 /* text-align */
 .wr.txl, .wr.txlr *, .wr.txl1 > * { text-align: left;   }
 .wr.txc, .wr.txcr *, .wr.txc1 > * { text-align: center; }
@@ -264,12 +266,12 @@ input[type="checkbox"].wr.dsc:not(:checked) ~ * { display: none; }
 .wr.lg-vat, .wr.lg-vatr *, .wr.lg-vat1 > * { vertical-align: top; }
 .wr.lg-vam, .wr.lg-vamr *, .wr.lg-vam1 > * { vertical-align: middle; }
 .wr.lg-vab, .wr.lg-vabr *, .wr.lg-vab1 > * { vertical-align: bottom; }
-.wr.lg-db, .wr.lg-dbr *, .wr.lg-db1 > * { display: block; }
+.wr.lg-db,  .wr.lg-dbr *,  .wr.lg-db1 > *  { display: block; }
 .wr.lg-dib, .wr.lg-dibr *, .wr.lg-dib1 > * { display: inline-block; }
-.wr.lg-dt, .wr.lg-dtr *, .wr.lg-dt1 > * { display: table; }
-.wr.lg-db.wr.lg-d, .wr.lg-dbr.wr.lg-d *, .wr.lg-db1.wr.lg-d > * { display: block; }
-.wr.lg-dib.wr.lg-d, .wr.lg-dibr.wr.lg-d *, .wr.lg-dib1.wr.lg-d > * { display: inline-block; }
-.wr.lg-dt.wr.lg-d, .wr.lg-dtr.wr.lg-d *, .wr.lg-dt1.wr.lg-d > *  { display: table; }
+.wr.lg-dt,  .wr.lg-dtr *,  .wr.lg-dt1 > *  { display: table; }
+.wr.lg-db,  .wr.lg-dbr *,  .wr.lg-db1 > *  { display: block; }
+.wr.lg-dib, .wr.lg-dibr *, .wr.lg-dib1 > * { display: inline-block; }
+.wr.lg-dt,  .wr.lg-dtr *,  .wr.lg-dt1 > *  { display: table; }
 .wr.lg-wp0,  .wr.lg-dib1>.wr.w0,  .wr.lg-dibr .wr.w0  { width: 0%;   }
 .wr.lg-wp1,  .wr.lg-dib1>.wr.w1,  .wr.lg-dibr .wr.w1  { width: 1%;   }
 .wr.lg-wp2,  .wr.lg-dib1>.wr.w2,  .wr.lg-dibr .wr.w2  { width: 2%;   }
@@ -356,10 +358,12 @@ input[type="checkbox"].wr.lg-dsc:not(:checked) ~ * { display: none; }
 /* position */
 .wr.lg-pfix { position: fixed; }
 .wr.lg-prlv { position: relative; }
-.wr.lg-brft, .wr.lg-brftr, .wr.lg-brftl { position: fixed; width: 100%; top: 0;    }
-.wr.lg-brfb, .wr.lg-brfbr, .wr.lg-brfbl { position: fixed; width: 100%; bottom: 0; }
-.wr.lg-brfr, .wr.lg-brftr, .wr.lg-brfbr { position: fixed; height: 100%; right: 0; }
-.wr.lg-brfl, .wr.lg-brftl, .wr.lg-brfbl { position: fixed; height: 100%; left: 0;  }
+.wr.lg-brft { position: fixed; width: 100%; top: 0;    }
+.wr.lg-brfb { position: fixed; width: 100%; bottom: 0; }
+.wr.lg-brfl { position: fixed; height: 100%; left: 0;  }
+.wr.lg-brfr { position: fixed; height: 100%; right: 0; }
+.wr.lg-brftl { position: fixed; height: 100%; top:0; left: 0;  }
+.wr.lg-brftr { position: fixed; height: 100%; top:0; right: 0; }
 /* text-align */
 .wr.lg-txl, .wr.lg-txlr *, .wr.lg-txl1 > * { text-align: left;   }
 .wr.lg-txc, .wr.lg-txcr *, .wr.lg-txc1 > * { text-align: center; }
@@ -520,12 +524,12 @@ input[type="checkbox"].wr.lg-dsc:not(:checked) ~ * { display: none; }
 .wr.md-vat, .wr.md-vatr *, .wr.md-vat1 > * { vertical-align: top; }
 .wr.md-vam, .wr.md-vamr *, .wr.md-vam1 > * { vertical-align: middle; }
 .wr.md-vab, .wr.md-vabr *, .wr.md-vab1 > * { vertical-align: bottom; }
-.wr.md-db, .wr.md-dbr *, .wr.md-db1 > * { display: block; }
+.wr.md-db,  .wr.md-dbr *,  .wr.md-db1 > *  { display: block; }
 .wr.md-dib, .wr.md-dibr *, .wr.md-dib1 > * { display: inline-block; }
-.wr.md-dt, .wr.md-dtr *, .wr.md-dt1 > * { display: table; }
-.wr.md-db.wr.md-d, .wr.md-dbr.wr.md-d *, .wr.md-db1.wr.md-d > * { display: block; }
-.wr.md-dib.wr.md-d, .wr.md-dibr.wr.md-d *, .wr.md-dib1.wr.md-d > * { display: inline-block; }
-.wr.md-dt.wr.md-d, .wr.md-dtr.wr.md-d *, .wr.md-dt1.wr.md-d > *  { display: table; }
+.wr.md-dt,  .wr.md-dtr *,  .wr.md-dt1 > *  { display: table; }
+.wr.md-db,  .wr.md-dbr *,  .wr.md-db1 > *  { display: block; }
+.wr.md-dib, .wr.md-dibr *, .wr.md-dib1 > * { display: inline-block; }
+.wr.md-dt,  .wr.md-dtr *,  .wr.md-dt1 > *  { display: table; }
 .wr.md-wp0,  .wr.md-dib1>.wr.w0,  .wr.md-dibr .wr.w0  { width: 0%;   }
 .wr.md-wp1,  .wr.md-dib1>.wr.w1,  .wr.md-dibr .wr.w1  { width: 1%;   }
 .wr.md-wp2,  .wr.md-dib1>.wr.w2,  .wr.md-dibr .wr.w2  { width: 2%;   }
@@ -611,10 +615,13 @@ input[type="checkbox"].wr.lg-dsc:not(:checked) ~ * { display: none; }
 input[type="checkbox"].wr.md-dsc:not(:checked) ~ * { display: none; }
 /* position */
 .wr.md-pfix { position: fixed; }
-.wr.md-brft, .wr.md-brftr, .wr.md-brftl { position: fixed; width: 100%; top: 0;    }
-.wr.md-brfb, .wr.md-brfbr, .wr.md-brfbl { position: fixed; width: 100%; bottom: 0; }
-.wr.md-brfr, .wr.md-brftr, .wr.md-brfbr { position: fixed; height: 100%; right: 0; }
-.wr.md-brfl, .wr.md-brftl, .wr.md-brfbl { position: fixed; height: 100%; left: 0;  }
+.wr.md-prlv { position: relative; }
+.wr.md-brft { position: fixed; width: 100%; top: 0;    }
+.wr.md-brfb { position: fixed; width: 100%; bottom: 0; }
+.wr.md-brfl { position: fixed; height: 100%; left: 0;  }
+.wr.md-brfr { position: fixed; height: 100%; right: 0; }
+.wr.md-brftl { position: fixed; height: 100%; top:0; left: 0;  }
+.wr.md-brftr { position: fixed; height: 100%; top:0; right: 0; }
 /* text-align */
 .wr.md-txl, .wr.md-txlr *, .wr.md-txl1 > * { text-align: left;   }
 .wr.md-txc, .wr.md-txcr *, .wr.md-txc1 > * { text-align: center; }
@@ -776,12 +783,12 @@ input[type="checkbox"].wr.md-dsc:not(:checked) ~ * { display: none; }
 .wr.sm-vat, .wr.sm-vatr *, .wr.sm-vat1 > * { vertical-align: top; }
 .wr.sm-vam, .wr.sm-vamr *, .wr.sm-vam1 > * { vertical-align: middle; }
 .wr.sm-vab, .wr.sm-vabr *, .wr.sm-vab1 > * { vertical-align: bottom; }
-.wr.sm-db, .wr.sm-dbr *, .wr.sm-db1 > * { display: block; }
+.wr.sm-db,  .wr.sm-dbr *,  .wr.sm-db1 > *  { display: block; }
 .wr.sm-dib, .wr.sm-dibr *, .wr.sm-dib1 > * { display: inline-block; }
-.wr.sm-dt, .wr.sm-dtr *, .wr.sm-dt1 > * { display: table; }
-.wr.sm-db.wr.sm-d, .wr.sm-dbr.wr.sm-d *, .wr.sm-db1.wr.sm-d > * { display: block; }
-.wr.sm-dib.wr.sm-d, .wr.sm-dibr.wr.sm-d *, .wr.sm-dib1.wr.sm-d > * { display: inline-block; }
-.wr.sm-dt.wr.sm-d, .wr.sm-dtr.wr.sm-d *, .wr.sm-dt1.wr.sm-d > *  { display: table; }
+.wr.sm-dt,  .wr.sm-dtr *,  .wr.sm-dt1 > *  { display: table; }
+.wr.sm-db,  .wr.sm-dbr *,  .wr.sm-db1 > *  { display: block; }
+.wr.sm-dib, .wr.sm-dibr *, .wr.sm-dib1 > * { display: inline-block; }
+.wr.sm-dt,  .wr.sm-dtr *,  .wr.sm-dt1 > *  { display: table; }
 .wr.sm-wp0,  .wr.sm-dib1>.wr.w0,  .wr.sm-dibr .wr.w0  { width: 0%;   }
 .wr.sm-wp1,  .wr.sm-dib1>.wr.w1,  .wr.sm-dibr .wr.w1  { width: 1%;   }
 .wr.sm-wp2,  .wr.sm-dib1>.wr.w2,  .wr.sm-dibr .wr.w2  { width: 2%;   }
@@ -867,10 +874,13 @@ input[type="checkbox"].wr.md-dsc:not(:checked) ~ * { display: none; }
 input[type="checkbox"].wr.sm-dsc:not(:checked) ~ * { display: none; }
 /* position */
 .wr.sm-pfix { position: fixed; }
-.wr.sm-brft, .wr.sm-brftr, .wr.sm-brftl { position: fixed; width: 100%; top: 0;    }
-.wr.sm-brfb, .wr.sm-brfbr, .wr.sm-brfbl { position: fixed; width: 100%; bottom: 0; }
-.wr.sm-brfr, .wr.sm-brftr, .wr.sm-brfbr { position: fixed; height: 100%; right: 0; }
-.wr.sm-brfl, .wr.sm-brftl, .wr.sm-brfbl { position: fixed; height: 100%; left: 0;  }
+.wr.sm-prlv { position: relative; }
+.wr.sm-brft { position: fixed; width: 100%; top: 0;    }
+.wr.sm-brfb { position: fixed; width: 100%; bottom: 0; }
+.wr.sm-brfl { position: fixed; height: 100%; left: 0;  }
+.wr.sm-brfr { position: fixed; height: 100%; right: 0; }
+.wr.sm-brftl { position: fixed; height: 100%; top:0; left: 0;  }
+.wr.sm-brftr { position: fixed; height: 100%; top:0; right: 0; }
 /* text-align */
 .wr.sm-txl, .wr.sm-txlr *, .wr.sm-txl1 > * { text-align: left;   }
 .wr.sm-txc, .wr.sm-txcr *, .wr.sm-txc1 > * { text-align: center; }
