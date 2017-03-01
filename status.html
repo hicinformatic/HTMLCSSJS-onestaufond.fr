@@ -7,53 +7,120 @@
         <link rel="stylesheet" type="text/css" href="css/color.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body class="bg-b logo">
+    <body class="bg-b">
 
-        <section class="wr c80 mrgt10 bg-bl2">
-            <h1 class="wr pad9 bg-bd6 cl-bl5">Serveur</h1>
+        <header class="wr pad10 bg-bd5 cl-bl5 dib1">
+            <img class="wr vam mh32 mw32 mrgr5" src="img/commons/refresh.svg" title="rafraichissement"><p class="wr w80 f15 lg-f20 vam">Rafraichissement des données toutes les 30 minutes</p>
+        </header>
+
+        <section class="wr lg-c80 mrgt10 bg-bl2">
+            <h1 class="wr pad9 bg-bd6 cl-bl5 dib1">
+                <div class="wr w70 sm-f12">
+                    <img class="wr vam" src="img/commons/server.png" title="serveur">&nbsp;Serveur
+                </div><!--
+             --><p id="timer_server" class="wr w30 txr sm-dn">12:01:24</p>
+            </h1>
             <div class="wr dib1">
-                <div class="wr w30 vam txc"><img class="wr mh64" src="img/commons/off.svg"></div><!--
+                <div class="wr w30 vam txc"><img id="status_server" class="wr mh64" src="img/commons/off.svg"></div><!--
              --><div class="wr w70 vam">
                     <br>
                     <article>
-                        <h2>Processus</h2>
+                        <h2><img class="wr vam" src="img/commons/cpu.png" title="cpu">&nbsp;Processus</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
+                            <div class="wr w20"><p  id="cpu_server" class="wr txc vam">0%</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="cpu_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                        </div>
                     </article>
                     <article>
-                        <h2>Mémoire</h2>
+                        <h2><img class="wr vam" src="img/commons/memory.png" title="memoire">&nbsp;Mémoire</h2>
                         <div class="wr dib1">
                             <div class="wr w20"><p class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
-                        <br>
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="memory_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                        </div>
                     </article>
+                    <br>
                 </div>
             </div>
         </section>
 
-        <section class="wr c80 mrgt10 bg-bl2">
-            <h1 class="wr pad9 bg-bd6 cl-bl5">Teamspeak 3</h1>
+        <section class="wr lg-c80 mrgt10 bg-bl2">
+            <h1 class="wr pad9 bg-bd6 cl-bl5 dib1">
+                <div class="wr w70 sm-f12">
+                    <img class="wr vam" src="img/commons/teamspeak3.png" title="teamspeak3">&nbsp;Teamspeak 3
+                </div><!--
+             --><p id="timer_temspeak3" class="wr w30 txr sm-dn">12:01:24</p>
+            </h1>
             <div class="wr dib1">
-                <div class="wr w30 vam txc"><img class="wr mh64" src="img/commons/off.svg"></div><!--
+                <div class="wr w30 vam txc"><img id="status_teamspeak3" class="wr mh64" src="img/commons/off.svg"></div><!--
              --><div class="wr w70 vam">
                     <br>
                     <article>
-                        <h2>Processus</h2>
+                        <h2><img class="wr vam" src="img/commons/cpu.png" title="cpu">&nbsp;Processus</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
+                            <div class="wr w20"><p id="cpu_teamspeak3" class="wr txc vam">0%</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="cpu_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                        </div>
                     </article>
                     <article>
-                        <h2>Mémoire</h2>
+                        <h2><img class="wr vam" src="img/commons/memory.png" title="memoire">&nbsp;Mémoire</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
-                        <br>
+                            <div class="wr w20"><p id="memory_teamspeak3" class="wr txc vam">0%</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="memory_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
                     </article>
+                    <article>
+                        <h2><img class="wr mw32 vam" src="img/logo.png" title="utilisateur">&nbsp;Utilisateurs +</h2>
+                        <div class="wr dib1">
+                            <div class="wr w20"><p id="user_teamspeak3" class="wr txc vam">8/32</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="user_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                        </div>
+                        <div id="user_teamspeak3" class="wr mrgt5 r80 wp70 bd-bd3 cl-bd5 txc">
+                            <span class="wr dib wp25">Gyn</span><span class="wr dib wp25">Ti-Fash</span><span class="wr dib wp25">Wellgo</span><span class="wr dib wp25">Itchi</span><!--
+                         --><span class="wr dib wp25">Wellgo</span><span class="wr dib wp25">Itchi</span><span class="wr dib wp25">Ti-Fash</span><span class="wr dib wp25">Gyn</span>
+                        </div>
+                    </article>
+                    <br>
                 </div>
             </div>
         </section>
 
+        <footer class="wr txc mrgt10 cl-bl5">
+            <p>onestaufond.fr&nbsp;&copy;&nbsp;Gyn</p>
+        </footer>
+
+        <script>
+
+        function updateStatus(url, status) { document.getElementById('status_' + url).src =  'img/commons/' + status + '.svg'; }
+        function updateCpu(url, percent) {
+            document.getElementById('cpu_' + url).innerHTML =  percent + '%';
+            document.getElementById('cpu_' + url + '_percent').style.width = percent + '%';
+        }
+        function updateMemory(url, percent) {
+            document.getElementById('memory_' + url).innerHTML =  percent + '%';
+            document.getElementById('memory_' + url + '_percent').style.width = percent + '%';
+        }
+        function updateUser(url, number) {
+            document.getElementById('user_' + url).innerHTML =  percent + '%';
+            document.getElementById('user_' + url + '_percent').style.width = Math.round(number) + '%';
+        }
+
+        function getStatus(url, divider) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    datas = this.responseText;
+                    datas = JSON.parse(datas);
+                    if (typeof datas.status != 'undefined') updateStatus(url, datas.status);
+                    if (typeof datas.cpu != 'undefined') updateCpu(url, datas.cpu);
+                    if (typeof datas.mem != 'undefined') updateMemory(url, datas.mem);
+                    if (typeof datas.users != 'undefined') updateUser(url, datas.users);
+                }
+            };
+            xhttp.open('GET', url + '.json', true);
+            xhttp.setRequestHeader('Content-Type', 'application/json');
+            xhttp.overrideMimeType('application/json');
+            xhttp.send();
+        }
+        getStatus('teamspeak3', 32);
+        </script>
     </body>
 </html>
