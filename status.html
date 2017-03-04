@@ -167,7 +167,7 @@
                     if (typeof datas.users != 'undefined') updateUser(url, divider, datas.users, datas.list);
                 }
             };
-            xhttp.open('GET', 'http://status.onestaufond.fr/' + url + '.json', true);
+            xhttp.open('GET', url + '.json', true);
             xhttp.setRequestHeader('Content-Type', 'application/json');
             xhttp.overrideMimeType('application/json');
             xhttp.send();
