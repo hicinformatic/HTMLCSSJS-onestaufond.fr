@@ -57,20 +57,20 @@
                     <article>
                         <h2><img class="wr vam" src="statics/img/commons/cpu.png" title="cpu">&nbsp;Processus</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p id="cpu_onestaufond" class="wr txc vam">0%</p></div><!--
+                            <div class="wr w20"><p id="cpu_onestaufond" class="wr txc vam sm-f12">0%</p></div><!--
                          --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="cpu_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
                         </div>
                     </article>
                     <article>
                         <h2><img class="wr vam" src="statics/img/commons/memory.png" title="memoire">&nbsp;Mémoire</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p id="mem_onestaufond" class="wr txc vam">0%</p></div><!--
+                            <div class="wr w20"><p id="mem_onestaufond" class="wr txc vam sm-f12">0%</p></div><!--
                          --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="mem_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
                     </article>
                     <article>
                         <h2><img class="wr mw32 vam" src="statics/img/logo.png" title="utilisateur">&nbsp;Utilisateurs +</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p id="user_onestaufond" class="wr txc vam">0/500</p></div><!--
+                            <div class="wr w20"><p id="user_onestaufond" class="wr txc vam sm-f12">0/500</p></div><!--
                          --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="user_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
                         </div>
                         <div id="user_onestaufond_list" class="wr mrgt5 r80 wp70 bd-bd3 cl-bd5 txc sm-dbr">
@@ -220,18 +220,10 @@
                 if (this.readyState == 4 && this.status == 200) {
                     datas = this.responseText;
                     datas = JSON.parse(datas);
-                    if (typeof datas.uptime != 'undefined') {
-                        if(setUptime(url, datas.uptime) > 0) status = 'on';
-                    }
-                    if (typeof datas.cpu != 'undefined') {
-                        if(setMemCpu(url, 'cpu', datas.cpu) > 70) var status = 'warning';
-                    }
-                    if (typeof datas.mem != 'undefined'){
-                        if(setMemCpu(url, 'mem', datas.mem) > 70) var status = 'warning';
-                    }
-                    if (typeof datas.users != 'undefined') {
-                        if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = 'warning';
-                    }  
+                    if (typeof datas.uptime != 'undefined') { if(setUptime(url, datas.uptime) > 0) status = 'on'; }
+                    if (typeof datas.cpu != 'undefined') { if(setMemCpu(url, 'cpu', datas.cpu) > 70) var status = 'warning'; }
+                    if (typeof datas.mem != 'undefined'){ if(setMemCpu(url, 'mem', datas.mem) > 70) var status = 'warning'; }
+                    if (typeof datas.users != 'undefined') { if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = 'warning'; }  
                     document.getElementById('status_' + url).src =  'statics/img/commons/' + status + '.svg';
                 }
             };
