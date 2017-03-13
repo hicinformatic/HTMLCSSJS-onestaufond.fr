@@ -34,8 +34,8 @@
                     <article>
                         <h2><img class="wr vam" src="statics/img/commons/memory.png" title="memoire">&nbsp;Mémoire</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p id="memory_server" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="memory_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            <div class="wr w20"><p id="mem_server" class="wr txc vam">0%</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="mem_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
                         </div>
                     </article>
                     <br>
@@ -64,8 +64,8 @@
                     <article>
                         <h2><img class="wr vam" src="statics/img/commons/memory.png" title="memoire">&nbsp;Mémoire</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p id="memory_onestaufond" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="memory_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
+                            <div class="wr w20"><p id="mem_onestaufond" class="wr txc vam">0%</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="mem_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
                     </article>
                     <article>
                         <h2><img class="wr mw32 vam" src="statics/img/logo.png" title="utilisateur">&nbsp;Utilisateurs +</h2>
@@ -102,8 +102,8 @@
                     <article>
                         <h2><img class="wr vam" src="statics/img/commons/memory.png" title="memoire">&nbsp;Mémoire</h2>
                         <div class="wr dib1">
-                            <div class="wr w20"><p id="memory_teamspeak3" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="memory_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
+                            <div class="wr w20"><p id="mem_teamspeak3" class="wr txc vam">0%</p></div><!--
+                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="mem_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
                     </article>
                     <article>
                         <h2><img class="wr mw32 vam" src="statics/img/logo.png" title="utilisateur">&nbsp;Utilisateurs +</h2>
@@ -140,8 +140,8 @@
             document.getElementById('cpu_' + url + '_percent').style.width = percent + '%';
         }
         function updateMemory(url, percent) {
-            document.getElementById('memory_' + url).innerHTML =  percent + '%';
-            document.getElementById('memory_' + url + '_percent').style.width = percent + '%';
+            document.getElementById('mem_' + url).innerHTML =  percent + '%';
+            document.getElementById('mem_' + url + '_percent').style.width = percent + '%';
         }
         function updateUser(url, divider, number, list) {
             document.getElementById('user_' + url).innerHTML =  number + '/' + divider;
@@ -189,13 +189,13 @@
             if (seconds < 10) {seconds = "0"+seconds;}
             document.getElementById('timer_' + url).innerHTML =  hours+':'+minutes+':'+seconds;
         }
-        function setCpu(url, cpu) {
+        function setMemCpu(url, own, datas) {
             var percent = 0;
-            for (var i = 0; i < cpu.length; i++) {
-                percent = (parseFloat(percent) + parseFloat(cpu[i]));
+            for (var i = 0; i < datas.length; i++) {
+                percent = (parseFloat(percent) + parseFloat(datas[i]));
             }
-            document.getElementById('cpu_' + url).innerHTML =  percent + '%';
-            document.getElementById('cpu_' + url + '_percent').style.width = percent + '%';
+            document.getElementById(own + '_' + url).innerHTML =  percent + '%';
+            document.getElementById(own + '_' + url + '_percent').style.width = percent + '%';
         }
         function getStatus(url, divider=0) {
             var xhttp = new XMLHttpRequest();
@@ -204,8 +204,8 @@
                     datas = this.responseText;
                     datas = JSON.parse(datas);
                     if (typeof datas.uptime != 'undefined') setUptime(url, datas.uptime);
-                    if (typeof datas.cpu != 'undefined')    setCpu(url, datas.cpu);
-                    if (typeof datas.mem != 'undefined')    setMem(url, datas.mem);
+                    if (typeof datas.cpu != 'undefined')    setMemCpu(url, 'cpu', datas.cpu);
+                    if (typeof datas.mem != 'undefined')    setMemCpu(url, 'mem', datas.mem);
                     if (typeof datas.users != 'undefined')  setUsers(url, divider, datas.users);
                 }
             };
