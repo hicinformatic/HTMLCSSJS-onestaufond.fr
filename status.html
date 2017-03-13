@@ -228,6 +228,7 @@
                     }
                     if (typeof datas.mem != 'undefined'){
                         if(setMemCpu(url, 'mem', datas.mem) > 70) var status = 'warning';
+                    }
                     if (typeof datas.users != 'undefined') {
                         if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = 'warning';
                     }  
