@@ -198,6 +198,18 @@
             document.getElementById(own + '_' + url).innerHTML =  percent + '%';
             document.getElementById(own + '_' + url + '_percent').style.width = percent + '%';
         }
+        function setUsers(url, divider, users) {
+            var number = users.length;
+            document.getElementById('user_' + url).innerHTML =  number + '/' + divider;
+            document.getElementById('user_' + url + '_percent').style.width = Math.round(number/divider*100) + '%';
+            for (var i = 0; i < number; i++) {
+                var obj = users[i];
+                var newel = document.createElement('span');
+                newel.className = 'wr dib wp25';
+                newel.innerHTML = obj;
+                document.getElementById('user_' + url + '_list').appendChild(newel);
+            }
+        }
         function getStatus(url, divider=0) {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
