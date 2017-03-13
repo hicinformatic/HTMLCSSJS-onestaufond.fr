@@ -192,7 +192,7 @@
         function setCpu(url, cpu) {
             var percent = 0;
             for (var i = 0; i < cpu.length; i++) {
-                percent = percent + cpu[i];
+                percent = (parseFloat(percent) + parseFloat(cpu[i]);
             }
             document.getElementById('cpu_' + url).innerHTML =  percent + '%';
             document.getElementById('cpu_' + url + '_percent').style.width = percent + '%';
