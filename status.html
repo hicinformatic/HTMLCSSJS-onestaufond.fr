@@ -194,6 +194,7 @@
             for (var i = 0; i < datas.length; i++) {
                 percent = (parseFloat(percent) + parseFloat(datas[i]));
             }
+            percent = percent.toString();
             document.getElementById(own + '_' + url).innerHTML =  percent + '%';
             document.getElementById(own + '_' + url + '_percent').style.width = percent + '%';
         }
