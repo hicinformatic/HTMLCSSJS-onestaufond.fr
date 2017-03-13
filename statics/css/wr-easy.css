@@ -215,30 +215,30 @@ input[type="checkbox"].wr.dsc:not(:checked) ~ * { display: none; }
 .wr.mh300 { max-height: 500px; } .wr.mw500 { max-width: 500px; } .wr.ht500 { height: 500px; } .wr.wt500 { width: 500px; } .wr.lh500 { line-height: 500px; }
 .wr.mh300 { max-height: 512px; } .wr.mw512 { max-width: 512px; } .wr.ht512 { height: 512px; } .wr.wt512 { width: 512px; } .wr.lh512 { line-height: 512px; }
 /* fonts */
-.wr.f4  { font-size: 4px;  }
-.wr.f6  { font-size: 6px;  }
-.wr.f8  { font-size: 8px;  }
-.wr.f10 { font-size: 10px; }
-.wr.f12 { font-size: 12px; }
-.wr.f14 { font-size: 14px; }
-.wr.f16 { font-size: 16px; }
-.wr.f18 { font-size: 18px; }
-.wr.f20 { font-size: 20px; }
-.wr.f22 { font-size: 22px; }
-.wr.f24 { font-size: 24px; }
-.wr.f26 { font-size: 26px; }
-.wr.f28 { font-size: 28px; }
-.wr.f30 { font-size: 30px; }
-.wr.f32 { font-size: 32px; }
-.wr.f34 { font-size: 34px; }
-.wr.f36 { font-size: 36px; }
-.wr.f38 { font-size: 38px; }
-.wr.f40 { font-size: 40px; }
-.wr.f42 { font-size: 42px; }
-.wr.f44 { font-size: 44px; }
-.wr.f46 { font-size: 46px; }
-.wr.f48 { font-size: 48px; }
-.wr.f50 { font-size: 50px; }
+.wr.f4  { font-size: 4px;  } .wr.fr4 > *  { font-size: 4px;  }
+.wr.f6  { font-size: 6px;  } .wr.fr6 > *  { font-size: 6px;  }
+.wr.f8  { font-size: 8px;  } .wr.fr8 > * { font-size: 8px;  }
+.wr.f10 { font-size: 10px; } .wr.fr10 > * { font-size: 10px; }
+.wr.f12 { font-size: 12px; } .wr.fr12 > * { font-size: 12px; }
+.wr.f14 { font-size: 14px; } .wr.fr14 > * { font-size: 14px; }
+.wr.f16 { font-size: 16px; } .wr.fr16 > * { font-size: 16px; }
+.wr.f18 { font-size: 18px; } .wr.fr18 > * { font-size: 18px; }
+.wr.f20 { font-size: 20px; } .wr.fr20 > * { font-size: 20px; }
+.wr.f22 { font-size: 22px; } .wr.fr22 > * { font-size: 22px; }
+.wr.f24 { font-size: 24px; } .wr.fr24 > * { font-size: 24px; }
+.wr.f26 { font-size: 26px; } .wr.fr26 > * { font-size: 26px; }
+.wr.f28 { font-size: 28px; } .wr.fr28 > * { font-size: 28px; }
+.wr.f30 { font-size: 30px; } .wr.fr30 > * { font-size: 30px; }
+.wr.f32 { font-size: 32px; } .wr.fr32 > * { font-size: 32px; }
+.wr.f34 { font-size: 34px; } .wr.fr34 > * { font-size: 34px; }
+.wr.f36 { font-size: 36px; } .wr.fr36 > * { font-size: 36px; }
+.wr.f38 { font-size: 38px; } .wr.fr38 > * { font-size: 38px; }
+.wr.f40 { font-size: 40px; } .wr.fr40 > * { font-size: 40px; }
+.wr.f42 { font-size: 42px; } .wr.fr42 > * { font-size: 42px; }
+.wr.f44 { font-size: 44px; } .wr.fr44 > * { font-size: 44px; }
+.wr.f46 { font-size: 46px; } .wr.fr46 > * { font-size: 46px; }
+.wr.f48 { font-size: 48px; } .wr.fr48 > * { font-size: 48px; }
+.wr.f50 { font-size: 50px; } .wr.fr50 > * { font-size: 50px; }
 /* z-index  */
 .wr.z0  { z-index: 0;  }
 .wr.z1  { z-index: 1;  }
@@ -464,30 +464,30 @@ input[type="checkbox"].wr.lg-dsc:not(:checked) ~ * { display: none; }
 .wr.lg-mh300 { max-height: 500px; } .wr.lg-mw500 { max-width: 500px; } .wr.lg-ht500 { height: 500px; } .wr.lg-wt500 { width: 500px; } .wr.lg-lh500 { line-height: 500px; }
 .wr.lg-mh300 { max-height: 512px; } .wr.lg-mw512 { max-width: 512px; } .wr.lg-ht512 { height: 512px; } .wr.lg-wt512 { width: 512px; } .wr.lg-lh512 { line-height: 512px; }
 /* fonts */
-.wr.lg-f4  { font-size: 4px;  }
-.wr.lg-f6  { font-size: 6px;  }
-.wr.lg-f8  { font-size: 8px;  }
-.wr.lg-f10 { font-size: 10px; }
-.wr.lg-f12 { font-size: 12px; }
-.wr.lg-f14 { font-size: 14px; }
-.wr.lg-f16 { font-size: 16px; }
-.wr.lg-f18 { font-size: 18px; }
-.wr.lg-f20 { font-size: 20px; }
-.wr.lg-f22 { font-size: 22px; }
-.wr.lg-f24 { font-size: 24px; }
-.wr.lg-f26 { font-size: 26px; }
-.wr.lg-f28 { font-size: 28px; }
-.wr.lg-f30 { font-size: 30px; }
-.wr.lg-f32 { font-size: 32px; }
-.wr.lg-f34 { font-size: 34px; }
-.wr.lg-f36 { font-size: 36px; }
-.wr.lg-f38 { font-size: 38px; }
-.wr.lg-f40 { font-size: 40px; }
-.wr.lg-f42 { font-size: 42px; }
-.wr.lg-f44 { font-size: 44px; }
-.wr.lg-f46 { font-size: 46px; }
-.wr.lg-f48 { font-size: 48px; }
-.wr.lg-f50 { font-size: 50px; }
+.wr.lg-f4  { font-size: 4px;  } .wr.lg-fr4 > *  { font-size: 4px;  }
+.wr.lg-f6  { font-size: 6px;  } .wr.lg-fr6 > *  { font-size: 6px;  }
+.wr.lg-f8  { font-size: 8px;  } .wr.lg-fr8 > *  { font-size: 8px;  }
+.wr.lg-f10 { font-size: 10px; } .wr.lg-fr10 > * { font-size: 10px; }
+.wr.lg-f12 { font-size: 12px; } .wr.lg-fr12 > * { font-size: 12px; }
+.wr.lg-f14 { font-size: 14px; } .wr.lg-fr14 > * { font-size: 14px; }
+.wr.lg-f16 { font-size: 16px; } .wr.lg-fr16 > * { font-size: 16px; }
+.wr.lg-f18 { font-size: 18px; } .wr.lg-fr18 > * { font-size: 18px; }
+.wr.lg-f20 { font-size: 20px; } .wr.lg-fr20 > * { font-size: 20px; }
+.wr.lg-f22 { font-size: 22px; } .wr.lg-fr22 > * { font-size: 22px; }
+.wr.lg-f24 { font-size: 24px; } .wr.lg-fr24 > * { font-size: 24px; }
+.wr.lg-f26 { font-size: 26px; } .wr.lg-fr26 > * { font-size: 26px; }
+.wr.lg-f28 { font-size: 28px; } .wr.lg-fr28 > * { font-size: 28px; }
+.wr.lg-f30 { font-size: 30px; } .wr.lg-fr30 > * { font-size: 30px; }
+.wr.lg-f32 { font-size: 32px; } .wr.lg-fr32 > * { font-size: 32px; }
+.wr.lg-f34 { font-size: 34px; } .wr.lg-fr34 > * { font-size: 34px; }
+.wr.lg-f36 { font-size: 36px; } .wr.lg-fr36 > * { font-size: 36px; }
+.wr.lg-f38 { font-size: 38px; } .wr.lg-fr38 > * { font-size: 38px; }
+.wr.lg-f40 { font-size: 40px; } .wr.lg-fr40 > * { font-size: 40px; }
+.wr.lg-f42 { font-size: 42px; } .wr.lg-fr42 > * { font-size: 42px; }
+.wr.lg-f44 { font-size: 44px; } .wr.lg-fr44 > * { font-size: 44px; }
+.wr.lg-f46 { font-size: 46px; } .wr.lg-fr46 > * { font-size: 46px; }
+.wr.lg-f48 { font-size: 48px; } .wr.lg-fr48 > * { font-size: 48px; }
+.wr.lg-f50 { font-size: 50px; } .wr.lg-fr50 > * { font-size: 50px; }
 /* z-index  */
 .wr.lg-z0  { z-index: 0;  }
 .wr.lg-z1  { z-index: 1;  }
@@ -722,30 +722,30 @@ input[type="checkbox"].wr.md-dsc:not(:checked) ~ * { display: none; }
 .wr.md-mh300 { max-height: 500px; } .wr.md-mw500 { max-width: 500px; } .wr.md-ht500 { height: 500px; } .wr.md-wt500 { width: 500px; } .wr.md-lh500 { line-height: 500px; }
 .wr.md-mh300 { max-height: 512px; } .wr.md-mw512 { max-width: 512px; } .wr.md-ht512 { height: 512px; } .wr.md-wt512 { width: 512px; } .wr.md-lh512 { line-height: 512px; }
 /* fonts */
-.wr.md-f4  { font-size: 4px;  }
-.wr.md-f6  { font-size: 6px;  }
-.wr.md-f8  { font-size: 8px;  }
-.wr.md-f10 { font-size: 10px; }
-.wr.md-f12 { font-size: 12px; }
-.wr.md-f14 { font-size: 14px; }
-.wr.md-f16 { font-size: 16px; }
-.wr.md-f18 { font-size: 18px; }
-.wr.md-f20 { font-size: 20px; }
-.wr.md-f22 { font-size: 22px; }
-.wr.md-f24 { font-size: 24px; }
-.wr.md-f26 { font-size: 26px; }
-.wr.md-f28 { font-size: 28px; }
-.wr.md-f30 { font-size: 30px; }
-.wr.md-f32 { font-size: 32px; }
-.wr.md-f34 { font-size: 34px; }
-.wr.md-f36 { font-size: 36px; }
-.wr.md-f38 { font-size: 38px; }
-.wr.md-f40 { font-size: 40px; }
-.wr.md-f42 { font-size: 42px; }
-.wr.md-f44 { font-size: 44px; }
-.wr.md-f46 { font-size: 46px; }
-.wr.md-f48 { font-size: 48px; }
-.wr.md-f50 { font-size: 50px; }
+.wr.md-f4  { font-size: 4px;  } .wr.md-fr4 > *  { font-size: 4px;  }
+.wr.md-f6  { font-size: 6px;  } .wr.md-fr6 > *  { font-size: 6px;  }
+.wr.md-f8  { font-size: 8px;  } .wr.md-fr8 > *  { font-size: 8px;  }
+.wr.md-f10 { font-size: 10px; } .wr.md-fr10 > * { font-size: 10px; }
+.wr.md-f12 { font-size: 12px; } .wr.md-fr12 > * { font-size: 12px; }
+.wr.md-f14 { font-size: 14px; } .wr.md-fr14 > * { font-size: 14px; }
+.wr.md-f16 { font-size: 16px; } .wr.md-fr16 > * { font-size: 16px; }
+.wr.md-f18 { font-size: 18px; } .wr.md-fr18 > * { font-size: 18px; }
+.wr.md-f20 { font-size: 20px; } .wr.md-fr20 > * { font-size: 20px; }
+.wr.md-f22 { font-size: 22px; } .wr.md-fr22 > * { font-size: 22px; }
+.wr.md-f24 { font-size: 24px; } .wr.md-fr24 > * { font-size: 24px; }
+.wr.md-f26 { font-size: 26px; } .wr.md-fr26 > * { font-size: 26px; }
+.wr.md-f28 { font-size: 28px; } .wr.md-fr28 > * { font-size: 28px; }
+.wr.md-f30 { font-size: 30px; } .wr.md-fr30 > * { font-size: 30px; }
+.wr.md-f32 { font-size: 32px; } .wr.md-fr32 > * { font-size: 32px; }
+.wr.md-f34 { font-size: 34px; } .wr.md-fr34 > * { font-size: 34px; }
+.wr.md-f36 { font-size: 36px; } .wr.md-fr36 > * { font-size: 36px; }
+.wr.md-f38 { font-size: 38px; } .wr.md-fr38 > * { font-size: 38px; }
+.wr.md-f40 { font-size: 40px; } .wr.md-fr40 > * { font-size: 40px; }
+.wr.md-f42 { font-size: 42px; } .wr.md-fr42 > * { font-size: 42px; }
+.wr.md-f44 { font-size: 44px; } .wr.md-fr44 > * { font-size: 44px; }
+.wr.md-f46 { font-size: 46px; } .wr.md-fr46 > * { font-size: 46px; }
+.wr.md-f48 { font-size: 48px; } .wr.md-fr48 > * { font-size: 48px; }
+.wr.md-f50 { font-size: 50px; } .wr.md-fr50 > * { font-size: 50px; }
 /* z-index  */
 .wr.md-z0  { z-index: 0;  }
 .wr.md-z1  { z-index: 1;  }
@@ -981,30 +981,30 @@ input[type="checkbox"].wr.sm-dsc:not(:checked) ~ * { display: none; }
 .wr.sm-mh300 { max-height: 500px; } .wr.sm-mw500 { max-width: 500px; } .wr.sm-ht500 { height: 500px; } .wr.sm-wt500 { width: 500px; } .wr.sm-lh500 { line-height: 500px; }
 .wr.sm-mh300 { max-height: 512px; } .wr.sm-mw512 { max-width: 512px; } .wr.sm-ht512 { height: 512px; } .wr.sm-wt512 { width: 512px; } .wr.sm-lh512 { line-height: 512px; }
 /* fonts */
-.wr.sm-f4  { font-size: 4px;  }
-.wr.sm-f6  { font-size: 6px;  }
-.wr.sm-f8  { font-size: 8px;  }
-.wr.sm-f10 { font-size: 10px; }
-.wr.sm-f12 { font-size: 12px; }
-.wr.sm-f14 { font-size: 14px; }
-.wr.sm-f16 { font-size: 16px; }
-.wr.sm-f18 { font-size: 18px; }
-.wr.sm-f20 { font-size: 20px; }
-.wr.sm-f22 { font-size: 22px; }
-.wr.sm-f24 { font-size: 24px; }
-.wr.sm-f26 { font-size: 26px; }
-.wr.sm-f28 { font-size: 28px; }
-.wr.sm-f30 { font-size: 30px; }
-.wr.sm-f32 { font-size: 32px; }
-.wr.sm-f34 { font-size: 34px; }
-.wr.sm-f36 { font-size: 36px; }
-.wr.sm-f38 { font-size: 38px; }
-.wr.sm-f40 { font-size: 40px; }
-.wr.sm-f42 { font-size: 42px; }
-.wr.sm-f44 { font-size: 44px; }
-.wr.sm-f46 { font-size: 46px; }
-.wr.sm-f48 { font-size: 48px; }
-.wr.sm-f50 { font-size: 50px; }
+.wr.sm-f4  { font-size: 4px;  } .wr.sm-fr4 > *  { font-size: 4px;  }
+.wr.sm-f6  { font-size: 6px;  } .wr.sm-fr6 > *  { font-size: 6px;  }
+.wr.sm-f8  { font-size: 8px;  } .wr.sm-fr8 > *  { font-size: 8px;  }
+.wr.sm-f10 { font-size: 10px; } .wr.sm-fr10 > * { font-size: 10px; }
+.wr.sm-f12 { font-size: 12px; } .wr.sm-fr12 > * { font-size: 12px; }
+.wr.sm-f14 { font-size: 14px; } .wr.sm-fr14 > * { font-size: 14px; }
+.wr.sm-f16 { font-size: 16px; } .wr.sm-fr16 > * { font-size: 16px; }
+.wr.sm-f18 { font-size: 18px; } .wr.sm-fr18 > * { font-size: 18px; }
+.wr.sm-f20 { font-size: 20px; } .wr.sm-fr20 > * { font-size: 20px; }
+.wr.sm-f22 { font-size: 22px; } .wr.sm-fr22 > * { font-size: 22px; }
+.wr.sm-f24 { font-size: 24px; } .wr.sm-fr24 > * { font-size: 24px; }
+.wr.sm-f26 { font-size: 26px; } .wr.sm-fr26 > * { font-size: 26px; }
+.wr.sm-f28 { font-size: 28px; } .wr.sm-fr28 > * { font-size: 28px; }
+.wr.sm-f30 { font-size: 30px; } .wr.sm-fr30 > * { font-size: 30px; }
+.wr.sm-f32 { font-size: 32px; } .wr.sm-fr32 > * { font-size: 32px; }
+.wr.sm-f34 { font-size: 34px; } .wr.sm-fr34 > * { font-size: 34px; }
+.wr.sm-f36 { font-size: 36px; } .wr.sm-fr36 > * { font-size: 36px; }
+.wr.sm-f38 { font-size: 38px; } .wr.sm-fr38 > * { font-size: 38px; }
+.wr.sm-f40 { font-size: 40px; } .wr.sm-fr40 > * { font-size: 40px; }
+.wr.sm-f42 { font-size: 42px; } .wr.sm-fr42 > * { font-size: 42px; }
+.wr.sm-f44 { font-size: 44px; } .wr.sm-fr44 > * { font-size: 44px; }
+.wr.sm-f46 { font-size: 46px; } .wr.sm-fr46 > * { font-size: 46px; }
+.wr.sm-f48 { font-size: 48px; } .wr.sm-fr48 > * { font-size: 48px; }
+.wr.sm-f50 { font-size: 50px; } .wr.sm-fr50 > * { font-size: 50px; }
 /* z-index  */
 .wr.sm-z0  { z-index: 0;  }
 .wr.sm-z1  { z-index: 1;  }
