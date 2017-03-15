@@ -132,7 +132,9 @@
             if (hours   < 10) {hours   = "0"+hours;}
             if (minutes < 10) {minutes = "0"+minutes;}
             if (seconds < 10) {seconds = "0"+seconds;}
-            document.getElementById('timer_' + url).innerHTML =  hours+':'+minutes+':'+seconds;
+            if( typeof hours != 'undefined' && typeof minutes != 'undefined' && typeof seconds != 'undefined' ) {
+                document.getElementById('timer_' + url).innerHTML =  hours+':'+minutes+':'+seconds;
+            }
             return uptime;
         }
         function setMemCpu(url, own, datas) {
@@ -141,8 +143,10 @@
                 percent = (parseFloat(percent) + parseFloat(datas[i]));
             }
             percent = percent.toFixed(2);
-            document.getElementById(own + '_' + url).innerHTML =  percent + '%';
-            document.getElementById(own + '_' + url + '_percent').style.width = percent + '%';
+            if( percent > 0 ) {
+                document.getElementById(own + '_' + url).innerHTML =  percent + '%';
+                document.getElementById(own + '_' + url + '_percent').style.width = percent + '%';
+            }
             return percent;
         }
         function setUsers(url, divider, users) {
@@ -159,16 +163,16 @@
             return number;
         }
         function getStatus(url, divider=0) {
-            var status = 'off';
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
+                    var status = 'off';
                     datas = this.responseText;
                     datas = JSON.parse(datas);
                     if (typeof datas.uptime != 'undefined') { if(setUptime(url, datas.uptime) > 0) status = 'on'; }
                     if (typeof datas.cpu != 'undefined') { if(setMemCpu(url, 'cpu', datas.cpu) > 70) var status = 'warning'; }
                     if (typeof datas.mem != 'undefined'){ if(setMemCpu(url, 'mem', datas.mem) > 70) var status = 'warning'; }
-                    if (typeof datas.users != 'undefined') { if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = 'warning'; }  
+                    if (typeof datas.users != 'undefined') { if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = 'warning'; }
                     document.getElementById('status_' + url).src =  'statics/img/commons/' + status + '.svg';
                 }
             };
