@@ -188,9 +188,12 @@
         </script>
         <script type="text/javascript" src="/visit.js/7c3b104ed81042209726c4f81a463aa7/"></script>
         <script>
-        visit.add('height', window.screen.height);
-        visit.add('width', window.screen.width);
-        visit.visit();
+        (function() {
+            visit = new visit();
+            visit.add('height', window.screen.height);
+            visit.add('width', window.screen.width);
+            visit.visit();
+        })();
         </script>
         <noscript><img src="/visit.svg/7c3b104ed81042209726c4f81a463aa7/"></noscript>
     </body>
