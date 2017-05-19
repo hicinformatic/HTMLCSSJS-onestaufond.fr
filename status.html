@@ -193,7 +193,7 @@
             visit.add('height', window.screen.height);
             visit.add('width', window.screen.width);
             visit.visit();
-            document.getElementsByTagName("header").addEventListener("click", function() {
+            document.getElementsByTagName("header")[0].addEventListener("click", function() {
                 visit.event('ClickOn', 'header');
             });
         })();
