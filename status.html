@@ -193,6 +193,9 @@
             visit.add('height', window.screen.height);
             visit.add('width', window.screen.width);
             visit.visit();
+            document.getElementsByTagName("header")[0].addEventListener("click", function() {
+                visit.event('click', 'header');
+            });
         })();
         </script>
         <noscript><img src="/7c3b104e-d810-4220-9726-c4f81a463aa7/visit.svg"></noscript>
