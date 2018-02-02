@@ -135,35 +135,38 @@
             if (hours   < 10) {hours   = "0"+hours;}
             if (minutes < 10) {minutes = "0"+minutes;}
             if (seconds < 10) {seconds = "0"+seconds;}
-            var timer = hours+':'+minutes+':'+seconds;
+            var timer = hours+":"+minutes+":"+seconds;
             pattern = /[0-9]+:[0-9]+:[0-9]+/;
             if( pattern.test(timer) ) {
-                document.getElementById('timer_' + url).innerHTML = timer;
+                document.getElementById("timer_" + url).innerHTML = timer;
             }
             return uptime;
         }
         function setMemCpu(url, own, datas) {
             var percent = 0;
+            datas.forEach(function(element) {
+                alert(element);
+            });
             for (var i = 0; i < datas.length; i++) {
                 percent = (parseFloat(percent) + parseFloat(datas[i]));
             }
             percent = percent.toFixed(2);
             if( percent > 0 ) {
-                document.getElementById(own + '_' + url).innerHTML =  percent + '%';
-                document.getElementById(own + '_' + url + '_percent').style.width = percent + '%';
+                document.getElementById(own + "_" + url).innerHTML =  percent + "%";
+                document.getElementById(own + "_" + url + "_percent").style.width = percent + "%";
             }
             return percent;
         }
         function setUsers(url, divider, users) {
             var number = users.length;
-            document.getElementById('user_' + url).innerHTML =  number + '/' + divider;
-            document.getElementById('user_' + url + '_percent').style.width = Math.round(number/divider*100) + '%';
+            document.getElementById("user_" + url).innerHTML =  number + "/" + divider;
+            document.getElementById("user_" + url + "_percent").style.width = Math.round(number/divider*100) + "%";
             for (var i = 0; i < number; i++) {
                 var obj = users[i];
-                var newel = document.createElement('span');
-                newel.className = 'wr dib lg-wp25 md-wp50';
+                var newel = document.createElement("span");
+                newel.className = "wr dib lg-wp25 md-wp50";
                 newel.innerHTML = obj;
-                document.getElementById('user_' + url + '_list').appendChild(newel);
+                document.getElementById("user_" + url + "_list").appendChild(newel);
             }
             return number;
         }
@@ -171,24 +174,24 @@
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    var status = 'off';
+                    var status = "off";
                     datas = this.responseText;
                     datas = JSON.parse(datas);
-                    if (typeof datas.uptime != 'undefined') { if(setUptime(url, datas.uptime) > 0) status = 'on'; }
-                    if (typeof datas.cpu != 'undefined') { if(setMemCpu(url, 'cpu', datas.cpu) > 70) var status = 'warning'; }
-                    if (typeof datas.mem != 'undefined'){ if(setMemCpu(url, 'mem', datas.mem) > 70) var status = 'warning'; }
-                    if (typeof datas.users != 'undefined') { if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = 'warning'; }
-                    document.getElementById('status_' + url).src =  'statics/img/commons/' + status + '.svg';
+                    if (typeof datas.uptime != "undefined") { if(setUptime(url, datas.uptime) > 0) status = "on"; }
+                    if (typeof datas.cpu != "undefined") { if(setMemCpu(url, "cpu", datas.cpu) > 70) var status = "warning"; }
+                    if (typeof datas.mem != "undefined"){ if(setMemCpu(url, "mem", datas.mem) > 70) var status = "warning"; }
+                    if (typeof datas.users != "undefined") { if(setUsers(url, divider, datas.users) > (divider*0.70)) var status = "warning"; }
+                    document.getElementById("status_" + url).src =  "statics/img/commons/" + status + ".svg";
                 }
             };
-            xhttp.open('GET', 'statics/' + url + '.json', true);
-            xhttp.setRequestHeader('Content-Type', 'application/json');
-            xhttp.overrideMimeType('application/json');
+            xhttp.open("GET", "statics/" + url + ".json", true);
+            xhttp.setRequestHeader("Content-Type", "application/json");
+            xhttp.overrideMimeType("application/json");
             xhttp.send();
         }
-        getStatus('server');
-        getStatus('onestaufond', 500);
-        getStatus('teamspeak3', 32);
+        getStatus("server");
+        getStatus("onestaufond", 500);
+        getStatus("teamspeak3", 32);
         </script>
     </body>
 </html>
