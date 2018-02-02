@@ -144,8 +144,8 @@
         }
         function setMemCpu(url, own, datas) {
             var percent = 0;
-            datas.forEach(function(element) {
-                percent = (parseFloat(percent) + parseFloat(element));
+            datas.forEach(function(data) {
+                percent = (parseFloat(data) + parseFloat(data));
             });
             percent = percent.toFixed(2);
             if( percent > 0 ) {
@@ -158,13 +158,12 @@
             var number = users.length;
             document.getElementById("user_" + url).innerHTML =  number + "/" + divider;
             document.getElementById("user_" + url + "_percent").style.width = Math.round(number/divider*100) + "%";
-            for (var i = 0; i < number; i++) {
-                var obj = users[i];
+            users.forEach(function(user) {
                 var newel = document.createElement("span");
                 newel.className = "wr dib lg-wp25 md-wp50";
-                newel.innerHTML = obj;
+                newel.innerHTML = user;
                 document.getElementById("user_" + url + "_list").appendChild(newel);
-            }
+            });
             return number;
         }
         function getStatus(url, divider=0) {
