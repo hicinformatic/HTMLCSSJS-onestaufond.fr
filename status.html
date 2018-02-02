@@ -171,7 +171,7 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var status = "off";
-                    datas = this.responseText;
+                    var datas = this.responseText;
                     datas = JSON.parse(datas);
                     if (typeof datas.uptime != "undefined") { if(setUptime(url, datas.uptime) > 0) { status = "on"; } }
                     if (typeof datas.cpu != "undefined") { if(setMemCpu(url, "cpu", datas.cpu) > 70) { status = "warning"; } }
