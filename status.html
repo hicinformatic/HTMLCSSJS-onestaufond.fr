@@ -126,8 +126,9 @@
             </p>
         </footer>
         <script>
-        "use strict";
-        (function() {
+        var ready;
+        ready(function () {
+            "use strict";
             function setUptime(url, uptime) {
                 var sec_num = parseInt(uptime, 10);
                 var hours = Math.floor(sec_num / 3600);
@@ -151,21 +152,21 @@
             }
             function setMemCpu(url, own, datas) {
                 var percent = 0;
-                datas.forEach(function(data) {
+                datas.forEach(function (data) {
                     percent = (parseFloat(data) + parseFloat(data));
                 });
                 percent = percent.toFixed(2);
-                if (percent > 0 ) {
-                    document.getElementById(own + "_" + url).innerHTML =  percent + "%";
+                if (percent > 0) {
+                    document.getElementById(own + "_" + url).innerHTML = percent + "%";
                     document.getElementById(own + "_" + url + "_percent").style.width = percent + "%";
                 }
                 return percent;
             }
             function setUsers(url, divider, users) {
                 var number = users.length;
-                document.getElementById("user_" + url).innerHTML =  number + "/" + divider;
-                document.getElementById("user_" + url + "_percent").style.width = Math.round(number/divider*100) + "%";
-                users.forEach(function(user) {
+                document.getElementById("user_" + url).innerHTML = number + "/" + divider;
+                document.getElementById("user_" + url + "_percent").style.width = Math.round(number / divider * 100) + "%";
+                users.forEach(function (user) {
                     var newel = document.createElement("span");
                     newel.className = "wr dib lg-wp25 md-wp50";
                     newel.innerHTML = user;
@@ -173,18 +174,34 @@
                 });
                 return number;
             }
-            function getStatus(url, divider=0) {
+            function getStatus(url, divider = 0) {
                 var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
                         var status = "off";
                         var datas = this.responseText;
                         datas = JSON.parse(datas);
-                        if (typeof datas.uptime != "undefined") { if (setUptime(url, datas.uptime) > 0) { status = "on"; } }
-                        if (typeof datas.cpu != "undefined") { if (setMemCpu(url, "cpu", datas.cpu) > 70) { status = "warning"; } }
-                        if (typeof datas.mem != "undefined"){ if (setMemCpu(url, "mem", datas.mem) > 70) { status = "warning"; } }
-                        if (typeof datas.users != "undefined") { if (setUsers(url, divider, datas.users) > (divider*0.70)) { status = "warning"; } }
-                        document.getElementById("status_" + url).src =  "statics/img/commons/" + status + ".svg";
+                        if (datas.uptime !== undefined) {
+                            if (setUptime(url, datas.uptime) > 0) {
+                                status = "on";
+                            }
+                        }
+                        if (datas.cpu !== undefined) {
+                            if (setMemCpu(url, "cpu", datas.cpu) > 70) {
+                                status = "warning";
+                            }
+                        }
+                        if (datas.mem !== undefined) {
+                            if (setMemCpu(url, "mem", datas.mem) > 70) {
+                                status = "warning";
+                            }
+                        }
+                        if (datas.users !== undefined) {
+                            if (setUsers(url, divider, datas.users) > (divider * 0.70)) {
+                                status = "warning";
+                            }
+                        }
+                        document.getElementById("status_" + url).src = "statics/img/commons/" + status + ".svg";
                     }
                 };
                 xhttp.open("GET", "statics/" + url + ".json", true);
