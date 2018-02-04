@@ -153,6 +153,7 @@
                 var percent = 0;
                 datas.forEach(function (data) {
                     percent = (parseFloat(data) + parseFloat(data));
+                    console.log(data);
                 });
                 alert(percent);
                 percent = percent.toFixed(2);
@@ -175,6 +176,7 @@
                 return number;
             }
             function getStatus(url, divider = 0) {
+                console.log(url);
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (this.readyState === 4 && this.status === 200) {
