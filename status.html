@@ -240,9 +240,16 @@
                 diff_seconds = Math.abs(diff_seconds);
                 console.log(diff_seconds);
                 document.getElementById("countNext").innerHTML = diff_seconds;
+                return diff_seconds;
             }
 
-            setInterval( function() { countNext(15); }, 1000 );
+            setInterval( function() { 
+                if ( countNext(15) == 0 )  {
+                    getStatus("server");
+                    getStatus("onestaufond", 500);
+                    getStatus("teamspeak3", 32);
+                }
+            }, 1000 );
         })();
         </script>
     </body>
