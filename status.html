@@ -137,12 +137,12 @@
             var seconds = current_date.getSeconds();
             var diff = 0;
             var diff_seconds = 0;
-            if ( minutes < 45 ) {
-                diff = 45 - minutes;
+            if ( minutes < 15 ) {
+                diff = 15 - minutes;
             } else if ( minutes < 30 ) {
                 diff = 30 - minutes;
-            } else if ( minutes < 15 ) {
-                diff = 15 - minutes;
+            } else if ( minutes < 45 ) {
+                diff = 45 - minutes;
             }
             diff_seconds = 60 - seconds;
             var next_date = new Date(current_date.getTime() + diff*60000) ;
