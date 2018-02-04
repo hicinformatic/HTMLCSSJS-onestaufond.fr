@@ -140,6 +140,7 @@
 
             document.getElementById("horloge").innerHTML = minutes + ":" + seconds;
             var rest = minutes / 15;
+            rest = mintes - rest * 15;
             alert(rest);
 
             function setUptime(url, uptime) {
