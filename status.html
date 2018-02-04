@@ -139,6 +139,8 @@
             var minutes = date.getMinutes();
 
             document.getElementById("horloge").innerHTML = minutes + ":" + seconds;
+            var rest = minutes / 15;
+            alert(rest);
 
             function setUptime(url, uptime) {
                 var sec_num = parseInt(uptime, 10);
