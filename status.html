@@ -133,15 +133,16 @@
         (function () {
             "use strict";
             var current_date = new Date();
+            var by = 15;
             var minutes = current_date.getMinutes();
             var seconds = current_date.getSeconds();
             var diff = 0;
-            if ( minutes < 15 ) {
-                diff = 15 - minutes;
-            } else if ( minutes < 30 ) {
-                diff = 30 - minutes;
-            } else if ( minutes < 45 ) {
-                diff = 45 - minutes;
+            var possibilities = 60 / by;
+            for (i = 0; i < possibilities; i++) {
+                var diffcalc = by * i;
+                if ( minutes < diffcalc ) {
+                    diff = diffcalc - minutes;
+                }
             }
             var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
             console.log(current_date);
