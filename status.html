@@ -10,11 +10,9 @@
     </head>
     <body class="bg-b">
 
-        <p id="countNext"></p>
-
         <header class="wr pad10 bg-bd5 cl-bl5 dib1">
             <img class="wr vam mh32 mw32 mrgr5" src="statics/img/commons/refresh.svg" alt="refresh"><!--
-         --><p class="wr w80 f15 lg-f20 vam">Rafraîchissement des données toutes les 15 minutes</p>
+         --><p class="wr w80 f15 lg-f20 vam">Rafraîchissement des données dans <span id="countNext"></span> secondes.</p>
         </header>
 
         <section class="wr lg-c80 mrgt10 bg-bl2">
@@ -239,7 +237,7 @@
             getStatus("server");
             getStatus("onestaufond", 500);
             getStatus("teamspeak3", 32);
-            setInterval(countNext(15), 1000);
+            setInterval( function() { countNext(15); }, 1000 );
         })();
         </script>
     </body>
