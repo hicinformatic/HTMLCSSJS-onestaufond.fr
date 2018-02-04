@@ -138,7 +138,7 @@
             var seconds = current_date.getSeconds();
             var diff = 0;
             var possibilities = 60 / by;
-            for (i = 0; i < possibilities; i++) {
+            for (var i = 0; i < possibilities; i++) {
                 var diffcalc = by * i;
                 if ( minutes < diffcalc ) {
                     diff = diffcalc - minutes;
