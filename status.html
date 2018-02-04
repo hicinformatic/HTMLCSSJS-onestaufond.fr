@@ -141,6 +141,7 @@
                     var diffcalc = by * i;
                     if ( minutes < diffcalc ) {
                         diff = diffcalc - minutes;
+                        console.log(diff);
                     }
                 }
                 var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
