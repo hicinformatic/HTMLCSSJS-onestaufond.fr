@@ -139,11 +139,9 @@
             var diff_seconds = 0;
             if ( minutes < 45 ) {
                 diff = 45 - minutes;
-            }
-            if ( minutes < 30 ) {
+            } else if ( minutes < 30 ) {
                 diff = 30 - minutes;
-            }
-            if ( minutes < 15 ) {
+            } else if ( minutes < 15 ) {
                 diff = 15 - minutes;
             }
             diff_seconds = 60 - seconds;
