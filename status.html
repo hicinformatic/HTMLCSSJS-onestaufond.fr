@@ -132,16 +132,10 @@
         <script>
         (function () {
             "use strict";
-
-            var date = new Date;
-
-            var seconds = date.getSeconds();
-            var minutes = date.getMinutes();
-
-            document.getElementById("horloge").innerHTML = minutes + ":" + seconds;
-            var rest = minutes / 15;
-            rest = rest * 15;
-            alert(rest);
+            var current_date = new Date();
+            var next_date = new Date(current_date.getTime() + 15*60000);
+            alert(current_date);
+            alert(next_date);
 
             function setUptime(url, uptime) {
                 var sec_num = parseInt(uptime, 10);
