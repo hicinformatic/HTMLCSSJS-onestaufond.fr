@@ -225,12 +225,9 @@
                 var seconds = current_date.getSeconds();
                 var diff = 0;
                 var possibilities = 60 / by;
-                console.log(possibilities);
-                console.log(minutes);
                 var i;
                 for (i = possibilities; i > 0; i--) {
                     var diffcalc = by * i;
-                    console.log(diffcalc);
                     if ( minutes < diffcalc ) {
                         diff = diffcalc - minutes;
                         console.log(diff);
