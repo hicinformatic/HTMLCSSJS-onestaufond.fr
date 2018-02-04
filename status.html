@@ -144,7 +144,7 @@
                     }
                 }
                 var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
-                var diff_seconds = current_date.getTime() - next_date.getTime();
+                var diff_seconds = next_date.getTime() - current_date.getTime();
                 diff_seconds = diff_seconds / 1000;
                 diff_seconds = Math.abs(diff_seconds);
                 document.getElementById("countNext").innerHTML = diff_seconds;
