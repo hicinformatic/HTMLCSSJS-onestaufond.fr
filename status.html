@@ -145,12 +145,18 @@
                 diff = 45 - minutes;
             }
             diff_seconds = 60 - seconds;
-            console.log(current_date);
             var next_date = new Date(current_date.getTime() + diff*60000) ;
+            var next_date_seconds = new Date(next_date.getTime() - seconds*600);
+            console.log(current_date);
             console.log(next_date);
-            console.log(seconds);
-            next_date = new Date(next_date.getTime() - seconds*600);
-            console.log(next_date);
+            console.log(next_date_seconds);
+
+            console.log(current_date.getTime());
+            console.log(next_date.getTime());
+            console.log(next_date_seconds.getTime());
+
+
+
 
             function setUptime(url, uptime) {
                 var sec_num = parseInt(uptime, 10);
