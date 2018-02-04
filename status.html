@@ -145,15 +145,12 @@
                 diff = 45 - minutes;
             }
             diff_seconds = 60 - seconds;
-            var next_date = new Date(current_date.getTime() + diff*60000) ;
-            var next_date_seconds = new Date(next_date.getTime() - seconds*1000);
+            var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
             console.log(current_date);
             console.log(next_date);
-            console.log(next_date_seconds);
 
             console.log(current_date.getTime());
             console.log(next_date.getTime());
-            console.log(next_date_seconds.getTime());
 
 
 
