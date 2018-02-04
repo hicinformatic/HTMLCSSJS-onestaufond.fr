@@ -136,7 +136,6 @@
             var minutes = current_date.getMinutes();
             var seconds = current_date.getSeconds();
             var diff = 0;
-            var diff_seconds = 0;
             if ( minutes < 15 ) {
                 diff = 15 - minutes;
             } else if ( minutes < 30 ) {
@@ -144,13 +143,15 @@
             } else if ( minutes < 45 ) {
                 diff = 45 - minutes;
             }
-            diff_seconds = 60 - seconds;
             var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
             console.log(current_date);
             console.log(next_date);
 
-            console.log(current_date.getTime());
-            console.log(next_date.getTime());
+            var diff_seconds = current_date.getTime() - next_date.getTime();
+            diff_seconds = diff_seconds / 1000;
+            diff_seconds = Math.abs(diff_seconds);
+
+            console.log(diff_seconds);
 
 
 
