@@ -147,8 +147,8 @@
             diff_seconds = 60 - seconds;
             var next_date = new Date(current_date.getTime() + diff*60000) ;
             //next_date = new Date(next_date.getTime() - diff_seconds*6000);
-            alert(current_date);
-            alert(next_date);
+            console.log(current_date);
+            console.log(next_date);
 
             function setUptime(url, uptime) {
                 var sec_num = parseInt(uptime, 10);
