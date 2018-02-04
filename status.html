@@ -132,30 +132,25 @@
         <script>
         (function () {
             "use strict";
-            var current_date = new Date();
-            var by = 15;
-            var minutes = current_date.getMinutes();
-            var seconds = current_date.getSeconds();
-            var diff = 0;
-            var possibilities = 60 / by;
-            for (var i = 0; i < possibilities; i++) {
-                var diffcalc = by * i;
-                if ( minutes < diffcalc ) {
-                    diff = diffcalc - minutes;
+            function countNext(by) {
+                var current_date = new Date();
+                var minutes = current_date.getMinutes();
+                var seconds = current_date.getSeconds();
+                var diff = 0;
+                var possibilities = 60 / by;
+                var i;
+                for (i = 0; i < possibilities; i++) {
+                    var diffcalc = by * i;
+                    if ( minutes < diffcalc ) {
+                        diff = diffcalc - minutes;
+                    }
                 }
+                var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
+                var diff_seconds = current_date.getTime() - next_date.getTime();
+                diff_seconds = diff_seconds / 1000;
+                diff_seconds = Math.abs(diff_seconds);
+                document.getElementById("countNext").innerHTML = diff_seconds;
             }
-            var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
-            console.log(current_date);
-            console.log(next_date);
-
-            var diff_seconds = current_date.getTime() - next_date.getTime();
-            diff_seconds = diff_seconds / 1000;
-            diff_seconds = Math.abs(diff_seconds);
-
-            console.log(diff_seconds);
-
-
-
 
             function setUptime(url, uptime) {
                 var sec_num = parseInt(uptime, 10);
@@ -178,6 +173,7 @@
                 }
                 return uptime;
             }
+
             function setMemCpu(url, own, datas) {
                 var percent = 0;
                 datas.forEach(function (data) {
@@ -190,6 +186,7 @@
                 }
                 return percent;
             }
+
             function setUsers(url, divider, users) {
                 var number = users.length;
                 document.getElementById("user_" + url).innerHTML = number + "/" + divider;
@@ -202,6 +199,7 @@
                 });
                 return number;
             }
+
             function getStatus(url, divider = 0) {
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
@@ -237,9 +235,11 @@
                 xhttp.overrideMimeType("application/json");
                 xhttp.send();
             }
+
             getStatus("server");
             getStatus("onestaufond", 500);
             getStatus("teamspeak3", 32);
+            countNext(15);
         })();
         </script>
     </body>
