@@ -147,7 +147,7 @@
             diff_seconds = 60 - seconds;
             var next_date = new Date(current_date.getTime() + diff*60000) ;
             console.log(next_date);
-            next_date = new Date(next_date.getTime() - diff_seconds);
+            next_date = new Date(next_date.getTime() - diff_seconds*6000);
             console.log(current_date);
             console.log(next_date);
 
