@@ -231,7 +231,7 @@
                 for (i = possibilities; i > 0; i--) {
                     var diffcalc = by * i;
                     console.log(diffcalc);
-                    if ( minutes > diffcalc ) {
+                    if ( minutes < diffcalc ) {
                         diff = diffcalc - minutes;
                         console.log(diff);
                     }
