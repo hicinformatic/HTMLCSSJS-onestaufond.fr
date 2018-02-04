@@ -137,7 +137,7 @@
                 var diff = 0;
                 var possibilities = 60 / by;
                 var i;
-                for (i = 0; i < possibilities; i++) {
+                for (i = possibilities; i < possibilities; i--) {
                     var diffcalc = by * i;
                     if ( minutes < diffcalc ) {
                         diff = diffcalc - minutes;
