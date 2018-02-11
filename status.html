@@ -242,6 +242,8 @@
             var count = 0
             setInterval( function() {
                 count = countNext(15);
+                console.log(count);
+                console.log(diff_ok);
                 if ( refresh === true && diff_ok < count ) {
                     getStatus("server");
                     getStatus("onestaufond", 500);
