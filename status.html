@@ -236,6 +236,10 @@
                 return diff_seconds;
             }
 
+            getStatus("server");
+            getStatus("onestaufond", 500);
+            getStatus("teamspeak3", 32);
+
             var by = 15;
             var diff_ok = by * 60 - 5
             var refresh = true;
