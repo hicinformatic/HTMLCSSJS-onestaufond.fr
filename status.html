@@ -245,7 +245,7 @@
             var refresh = true;
             var count = 0
             setInterval( function() {
-                count = countNext(15);
+                count = countNext(15) - 3;
                 if ( refresh === true && diff_ok < count ) {
                     getStatus("server");
                     getStatus("onestaufond", 500);
