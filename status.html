@@ -215,10 +215,6 @@
                 xhttp.send();
             }
 
-            getStatus("server");
-            getStatus("onestaufond", 500);
-            getStatus("teamspeak3", 32);
-
             function countNext(by) {
                 var current_date = new Date();
                 var minutes = current_date.getMinutes();
@@ -240,11 +236,19 @@
                 return diff_seconds;
             }
 
-            setInterval( function() { 
-                if ( countNext(15) == 0 )  {
+            var by = 15;
+            var diff_ok = by * 60 - 5
+            var refresh = true;
+            var count = 0
+            setInterval( function() {
+                count = countNext(15);
+                if ( refresh === true and diff_ok < count ) {
                     getStatus("server");
                     getStatus("onestaufond", 500);
                     getStatus("teamspeak3", 32);
+                    refresh = false;
+                }else if(diff_ok > count) {
+                    refresh = true;
                 }
             }, 1000 );
         })();
