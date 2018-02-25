@@ -174,7 +174,9 @@
                     var newel = document.createElement("span");
                     newel.className = "wr dib lg-wp25 md-wp50";
                     newel.innerHTML = user;
-                    document.getElementById("user_" + url + "_list").appendChild(newel);
+                    userlist = document.getElementById("user_" + url + "_list"):
+                    userlist.innerHTML = "";
+                    userlist.appendChild(newel);
                 });
                 return number;
             }
@@ -251,7 +253,6 @@
                     getStatus("onestaufond", 500);
                     getStatus("teamspeak3", 32);
                     refresh = false;
-                    console.log('update');
                 }else if(diff_ok > count) {
                     refresh = true;
                 }
