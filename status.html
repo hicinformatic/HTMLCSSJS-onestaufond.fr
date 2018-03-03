@@ -4,260 +4,273 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
         <title>onestaufond.fr</title>
-        <link rel="stylesheet" type="text/css" href="/statics/css/wr-easy.css">
-        <link rel="stylesheet" type="text/css" href="/statics/css/color.css">
-        <link rel="stylesheet" type="text/css" href="/statics/css/style.css">
+        <link rel="stylesheet" type="text/css" href="statics/css/wr-easy.css">
+        <link rel="stylesheet" type="text/css" href="statics/css/color.css">
+        <link rel="stylesheet" type="text/css" href="statics/css/style.css">
     </head>
-    <body class="bg-b">
-
-        <header class="wr pad10 bg-bd5 cl-bl5 dib1">
-            <img class="wr vam mh32 mw32 mrgr5" src="statics/img/commons/refresh.svg" alt="refresh"><!--
-         --><p class="wr w80 f15 lg-f20 vam">Rafraîchissement des données dans <span id="countNext"></span> secondes.</p>
+    <body class="bg-b wr">
+        <header class="bg-bd5 cl-bl5 wr dib-rcs vam-rcs pad-px10">
+            <img class="wr mh-px30" src="statics/img/commons/refresh.svg" alt="refresh"><!--
+         --><p class="wr wdt-per80">&nbsp;Rafraîchissement des données dans <span id="countNext"></span> secondes.</p>
         </header>
 
-        <section class="wr lg-c80 mrgt10 bg-bl2">
-            <h1 class="wr pad9 bg-bd6 cl-bl5 dib1">
-                <span class="wr w70 sm-f12">
-                    <img class="wr vam" src="statics/img/commons/server.png" alt="server">&nbsp;Serveur
-                </span><!--
-             --><span id="timer_server" class="wr w30 txr sm-dn">00:00:00</span>
-            </h1>
-            <div class="wr dib1">
-                <div class="wr w30 vam txc"><img id="status_server" class="wr mh64" src="statics/img/commons/off.svg" alt="off"></div><!--
-             --><div class="wr w70 vam">
-                    <br>
-                    <article>
-                        <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p  id="cpu_server" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="cpu_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
-                        </div>
-                    </article>
-                    <article>
-                        <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p id="mem_server" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="mem_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
-                        </div>
-                    </article>
-                    <br>
+        <div class="wr mrgy-auto-chd mrgt-px10-chd">
+            <section class="bg-bl2 wr md-wdt-per80">
+                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                    <div class="wr vam wdt-per5">
+                        <img class="wr mh-px30" src="statics/img/commons/server.png" alt="server">
+                    </div><!--
+                 --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
+                        <span class="wr md-wdt-per50 txtl">Serveur</span><!--
+                     --><span class="wr md-wdt-per50 txtr" id="timer_server">00:00:00</span>
+                    </h1>
+                </header>
+                <div class="wr dib-chd">
+                    <div class="wr wdt-per30 vam txtc"><img id="status_server" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
+                --><div class="wr wdt-per70 vam">
+                        <br>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p  id="cpu_server" class="wr txtc vam">0%</p></div><!--
+                            --><div class="wr wdt-per70 vam"><div class="bg-vd3 wr wdt-per100 db ht-px32"><div id="cpu_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                        </article>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="mem_server" class="wr txtc vam">0%</p></div><!--
+                            --><div class="wr wdt-per70 vam"><div class="bg-vd3 wr db ht-px32 wdt-per100"><div id="mem_server_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                        </article>
+                        <br>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="wr lg-c80 mrgt10 sm-fr12 bg-bl2">
-            <h1 class="wr pad9 bg-bd6 cl-bl5 dib1">
-                <span class="wr w70">
-                    <img class="wr vam mw32" src="statics/img/logo.png" alt="onestaufond">&nbsp;onestaufond.fr
-                </span><!--
-             --><span id="timer_onestaufond" class="wr w30 txr sm-dn">00:00:00</span>
-            </h1>
-            <div class="wr dib1">
-                <div class="wr w30 vam txc"><img id="status_onestaufond" class="wr mh64" src="statics/img/commons/off.svg" alt="off"></div><!--
-             --><div class="wr w70 vam">
-                    <br>
-                    <article>
-                        <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p id="cpu_onestaufond" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="cpu_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
-                        </div>
-                    </article>
-                    <article>
-                        <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p id="mem_onestaufond" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="mem_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
-                    </article>
-                    <br>
+            <section class="bg-bl2 wr md-wdt-per80">
+                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                    <div class="wr vam wdt-per5">
+                        <img class="wr mh-px30" src="statics/img/logo.png" alt="server">
+                    </div><!--
+                 --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
+                        <span class="wr md-wdt-per50 txtl">onestaufond.fr</span><!--
+                     --><span class="wr md-wdt-per50 txtr" id="timer_onestaufond">00:00:00</span>
+                    </h1>
+                </header>
+                <div class="wr dib-chd">
+                    <div class="wr wdt-per30 vam txtc"><img id="status_onestaufond" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
+                --><div class="wr wdt-per70 vam">
+                        <br>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p  id="cpu_onestaufond" class="wr txtc vam">0%</p></div><!--
+                            --><div class="wr wdt-per70 vam"><div class="bg-vd3 wr wdt-per100 db ht-px32"><div id="cpu_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                        </article>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="mem_onestaufond" class="wr txtc vam">0%</p></div><!--
+                            --><div class="wr wdt-per70 vam"><div class="bg-vd3 wr db ht-px32 wdt-per100"><div id="mem_onestaufond_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                        </article>
+                        <br>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>  
 
-        <section class="wr lg-c80 mrgt10 bg-bl2">
-            <h1 class="wr pad9 bg-bd6 cl-bl5 dib1">
-                <span class="wr w70 sm-f12">
-                    <img class="wr vam" src="statics/img/commons/teamspeak3.png" alt="teamspeak3">&nbsp;Teamspeak 3
-                </span><!--
-             --><span id="timer_teamspeak3" class="wr w30 txr sm-dn">00:00:00</span>
-            </h1>
-            <div class="wr dib1">
-                <div class="wr w30 vam txc"><img id="status_teamspeak3" class="wr mh64" src="statics/img/commons/off.svg" alt="off"></div><!--
-             --><div class="wr w70 vam">
-                    <br>
-                    <article>
-                        <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p id="cpu_teamspeak3" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="cpu_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
-                        </div>
-                    </article>
-                    <article>
-                        <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p id="mem_teamspeak3" class="wr txc vam">0%</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div  id="mem_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div></div>
-                    </article>
-                    <article>
-                        <h2><img class="wr mw32 vam" src="statics/img/logo.png" alt="users">&nbsp;Utilisateurs</h2>
-                        <div class="wr dib1">
-                            <div class="wr w20"><p id="user_teamspeak3" class="wr txc vam">0/32</p></div><!--
-                         --><div class="wr w70 vam"><div class="wr db ht32 wp100 bg-vd3"><div id="user_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
-                        </div>
-                        <div class="wr mrgt5 r80 wp70 bd-bd3 cl-bd5 txc">
-                            <label for="user_teamspeak3_input" class="wr db f12 lh20 bg-bl4">Voir les utilisateurs connectés</label>
-                            <input type="checkbox" id="user_teamspeak3_input" class="wr dn dsc">
-                            <div id="user_teamspeak3_list" class="wr sm-dbr mh80 ofyscroll bg-bl5"></div>
-                        </div>
-                    </article>
-                    <br>
+            <section class="bg-bl2 wr md-wdt-per80">
+                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                    <div class="wr vam wdt-per5">
+                        <img src="statics/img/commons/teamspeak3.png" alt="server">
+                    </div><!--
+                 --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
+                        <span class="wr md-wdt-per50 txtl">Teamspeak 3</span><!--
+                     --><span class="wr md-wdt-per50 txtr" id="timer_teamspeak3">00:00:00</span>
+                    </h1>
+                </header>
+                <div class="wr dib-chd">
+                    <div class="wr wdt-per30 vam txtc"><img id="status_teamspeak3" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
+                --><div class="wr wdt-per70 vam">
+                        <br>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="cpu_teamspeak3" class="wr txtc vam">0%</p></div><!--
+                             --><div class="wr wdt-per70 vam"><div class="bg-vd3 wr wdt-per100 db ht-px32"><div id="cpu_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                        </article>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="mem_teamspeak3" class="wr txtc vam">0%</p></div><!--
+                            --><div class="wr wdt-per70 vam"><div class="bg-vd3 wr db ht-px32 wdt-per100"><div id="mem_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                        </article>
+                        <article>
+                            <h2><img class="wr vam mw-px32" src="statics/img/logo.png" alt="users">&nbsp;Utilisateurs</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="user_teamspeak3" class="wr txtc vam">0/32</p></div><!--
+                             --><div class="wr wdt-per70 vam"><div class="wr db ht-px32 wdt-per100 bg-vd3"><div id="user_teamspeak3_percent" class="wr db ht32 wp0 bg-rd1"></div></div></div>
+                            </div>
+                            <div class="bd-bd3 cl-bd5 wr mrgt-px5 wdt-per90 padl-per20 txtc">
+                                <label for="user_teamspeak3_input" class="bg-bl4 wr db lh20">Voir les utilisateurs connectés</label>
+                                <input type="checkbox" id="user_teamspeak3_input" class="wr dn dsc">
+                                <div id="user_teamspeak3_list" class="wr sm-dbr mh80 ofyscroll bg-bl5"></div>
+                            </div>
+                        </article>
+                        <br>
+                        <br>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <footer class="wr txc mrgt10 cl-bl5">
+        <footer class="cl-bl5 wr txtc mrgt-px10">
             <p>onestaufond.fr&nbsp;&copy;&nbsp;Gyn</p>
             <p class="wr mrgt10 mrgb10">
                 <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fonestaufond.fr%2Fstatus.html&profile=css3svg&usermedium=all&warning=1&vextwarning=">
-                    <img class="wr ht48" src="statics/img/commons/css3.svg" alt="CSS Valide!">
+                    <img class="wr ht-px48" src="statics/img/commons/css3.svg" alt="CSS Valide!">
                 </a>
                 <a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fonestaufond.fr%2Fstatus.html">
-                    <img class="wr ht48" src="statics/img/commons/html5.svg" alt="HTML5 Valide!">
+                    <img class="wr ht-px48" src="statics/img/commons/html5.svg" alt="HTML5 Valide!">
                 </a>
             </p>
         </footer>
 
         <script>
-        (function () {
-            "use strict";
-
-            function setUptime(url, uptime) {
-                var sec_num = parseInt(uptime, 10);
-                var hours = Math.floor(sec_num / 3600);
-                var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-                var seconds = sec_num - (hours * 3600) - (minutes * 60);
-                if (hours < 10) {
-                    hours = "0" + hours;
-                }
-                if (minutes < 10) {
-                    minutes = "0" + minutes;
-                }
-                if (seconds < 10) {
-                    seconds = "0" + seconds;
-                }
-                var timer = hours + ":" + minutes + ":" + seconds;
-                var pattern = /[0-9]+:[0-9]+:[0-9]+/;
-                if (pattern.test(timer)) {
-                    document.getElementById("timer_" + url).innerHTML = timer;
-                }
-                return uptime;
-            }
-
-            function setMemCpu(url, own, datas) {
-                var percent = 0;
-                datas.forEach(function (data) {
-                    percent = (parseFloat(percent) + parseFloat(data));
-                });
-                percent = percent.toFixed(2);
-                if (percent > 0) {
-                    document.getElementById(own + "_" + url).innerHTML = percent + "%";
-                    document.getElementById(own + "_" + url + "_percent").style.width = percent + "%";
-                }
-                return percent;
-            }
-
-            function setUsers(url, divider, users) {
-                var number = users.length;
-                document.getElementById("user_" + url).innerHTML = number + "/" + divider;
-                document.getElementById("user_" + url + "_percent").style.width = Math.round(number / divider * 100) + "%";
-                users.forEach(function (user) {
-                    var newel = document.createElement("span");
-                    newel.className = "wr dib lg-wp25 md-wp50";
-                    newel.innerHTML = user;
-                    userlist = document.getElementById("user_" + url + "_list"):
-                    userlist.innerHTML = "";
-                    userlist.appendChild(newel);
-                });
-                return number;
-            }
-
-            function getStatus(url, divider = 0) {
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState === 4 && this.status === 200) {
-                        var status = "off";
-                        var datas = this.responseText;
-                        datas = JSON.parse(datas);
-                        if (datas.uptime !== undefined) {
-                            if (setUptime(url, datas.uptime) > 0) {
-                                status = "on";
-                            }
-                        }
-                        if (datas.cpu !== undefined) {
-                            if (setMemCpu(url, "cpu", datas.cpu) > 70) {
-                                status = "warning";
-                            }
-                        }
-                        if (datas.mem !== undefined) {
-                            if (setMemCpu(url, "mem", datas.mem) > 70) {
-                                status = "warning";
-                            }
-                        }
-                        if (datas.users !== undefined) {
-                            if (setUsers(url, divider, datas.users) > (divider * 0.70)) {
-                                status = "warning";
-                            }
-                        }
-                        document.getElementById("status_" + url).src = "statics/img/commons/" + status + ".svg";
+            (function () {
+                "use strict";
+    
+                function setUptime(url, uptime) {
+                    var sec_num = parseInt(uptime, 10);
+                    var hours = Math.floor(sec_num / 3600);
+                    var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+                    var seconds = sec_num - (hours * 3600) - (minutes * 60);
+                    if (hours < 10) {
+                        hours = "0" + hours;
                     }
-                };
-                xhttp.open("GET", "statics/" + url + ".json", true);
-                xhttp.setRequestHeader("Content-Type", "application/json");
-                xhttp.overrideMimeType("application/json");
-                xhttp.send();
-            }
-
-            function countNext(by) {
-                var current_date = new Date();
-                var minutes = current_date.getMinutes();
-                var seconds = current_date.getSeconds();
-                var diff = 0;
-                var possibilities = 60 / by;
-                var i;
-                for (i = possibilities; i > 0; i--) {
-                    var diffcalc = by * i;
-                    if ( minutes < diffcalc ) {
-                        diff = diffcalc - minutes;
+                    if (minutes < 10) {
+                        minutes = "0" + minutes;
                     }
+                    if (seconds < 10) {
+                        seconds = "0" + seconds;
+                    }
+                    var timer = hours + ":" + minutes + ":" + seconds;
+                    var pattern = /[0-9]+:[0-9]+:[0-9]+/;
+                    if (pattern.test(timer)) {
+                        document.getElementById("timer_" + url).innerHTML = timer;
+                    }
+                    return uptime;
                 }
-                var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
-                var diff_seconds = next_date.getTime() - current_date.getTime();
-                diff_seconds = diff_seconds / 1000;
-                diff_seconds = Math.abs(diff_seconds);
-                document.getElementById("countNext").innerHTML = diff_seconds;
-                return diff_seconds;
-            }
-
-            getStatus("server");
-            getStatus("onestaufond", 500);
-            getStatus("teamspeak3", 32);
-
-            var by = 15;
-            var diff_ok = by * 60 - 5
-            var refresh = true;
-            var count = 0
-            setInterval( function() {
-                count = countNext(15) - 3;
-                if ( refresh === true && diff_ok < count ) {
-                    getStatus("server");
-                    getStatus("onestaufond", 500);
-                    getStatus("teamspeak3", 32);
-                    refresh = false;
-                }else if(diff_ok > count) {
-                    refresh = true;
+    
+                function setMemCpu(url, own, datas) {
+                    var percent = 0;
+                    datas.forEach(function (data) {
+                        percent = (parseFloat(percent) + parseFloat(data));
+                    });
+                    percent = percent.toFixed(2);
+                    if (percent > 0) {
+                        document.getElementById(own + "_" + url).innerHTML = percent + "%";
+                        document.getElementById(own + "_" + url + "_percent").style.width = percent + "%";
+                    }
+                    return percent;
                 }
-            }, 1000 );
-        })();
+    
+                function setUsers(url, divider, users) {
+                    var number = users.length;
+                    document.getElementById("user_" + url).innerHTML = number + "/" + divider;
+                    document.getElementById("user_" + url + "_percent").style.width = Math.round(number / divider * 100) + "%";
+                    users.forEach(function (user) {
+                        var newel = document.createElement("span");
+                        newel.className = "wr dib lg-wp25 md-wp50";
+                        newel.innerHTML = user;
+                        userlist = document.getElementById("user_" + url + "_list");
+                        userlist.innerHTML = "";
+                        userlist.appendChild(newel);
+                    });
+                    return number;
+                }
+    
+                function getStatus(url, divider = 0) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState === 4 && this.status === 200) {
+                            var status = "off";
+                            var datas = this.responseText;
+                            datas = JSON.parse(datas);
+                            if (datas.uptime !== undefined) {
+                                if (setUptime(url, datas.uptime) > 0) {
+                                    status = "on";
+                                }
+                            }
+                            if (datas.cpu !== undefined) {
+                                if (setMemCpu(url, "cpu", datas.cpu) > 70) {
+                                    status = "warning";
+                                }
+                            }
+                            if (datas.mem !== undefined) {
+                                if (setMemCpu(url, "mem", datas.mem) > 70) {
+                                    status = "warning";
+                                }
+                            }
+                            if (datas.users !== undefined) {
+                                if (setUsers(url, divider, datas.users) > (divider * 0.70)) {
+                                    status = "warning";
+                                }
+                            }
+                            document.getElementById("status_" + url).src = "statics/img/commons/" + status + ".svg";
+                        }
+                    };
+                    xhttp.open("GET", "statics/" + url + ".json", true);
+                    xhttp.setRequestHeader("Content-Type", "application/json");
+                    xhttp.overrideMimeType("application/json");
+                    xhttp.send();
+                }
+    
+                function countNext(by) {
+                    var current_date = new Date();
+                    var minutes = current_date.getMinutes();
+                    var seconds = current_date.getSeconds();
+                    var diff = 0;
+                    var possibilities = 60 / by;
+                    var i;
+                    for (i = possibilities; i > 0; i--) {
+                        var diffcalc = by * i;
+                        if ( minutes < diffcalc ) {
+                            diff = diffcalc - minutes;
+                        }
+                    }
+                    var next_date = new Date(current_date.getTime() + diff*60000 - seconds*1000) ;
+                    var diff_seconds = next_date.getTime() - current_date.getTime();
+                    diff_seconds = diff_seconds / 1000;
+                    diff_seconds = Math.abs(diff_seconds);
+                    document.getElementById("countNext").innerHTML = diff_seconds;
+                    return diff_seconds;
+                }
+    
+                getStatus("server");
+                getStatus("onestaufond", 500);
+                getStatus("teamspeak3", 32);
+    
+                var by = 15;
+                var diff_ok = by * 60 - 5
+                var refresh = true;
+                var count = 0
+                setInterval( function() {
+                    count = countNext(15) - 3;
+                    if ( refresh === true && diff_ok < count ) {
+                        getStatus("server");
+                        getStatus("onestaufond", 500);
+                        getStatus("teamspeak3", 32);
+                        refresh = false;
+                    }else if(diff_ok > count) {
+                        refresh = true;
+                    }
+                }, 1000 );
+            })();
         </script>
     </body>
 </html>
