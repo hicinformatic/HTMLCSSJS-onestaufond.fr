@@ -188,7 +188,7 @@
                         newel.className = "wr dib lg-wp25 md-wp50";
                         newel.innerHTML = user;
                         alert("user_" + url + "_list");
-                        userlist = document.getElementById("user_" + url + "_list");
+                        var userlist = document.getElementById("user_" + url + "_list");
                         userlist.innerHTML = "";
                         userlist.appendChild(newel);
                     });
