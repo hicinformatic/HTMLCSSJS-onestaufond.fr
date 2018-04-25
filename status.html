@@ -140,7 +140,47 @@
                     </div>
                 </div>
             </section>
+
+            <section class="bg-bl2 wr md-wdt-per80">
+                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                    <div class="wr vam wdt-per5">
+                        <img class="wr mh-px30" src="statics/img/logo.png" alt="server">
+                    </div><!--
+                 --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
+                        <span class="wr md-wdt-per50 txtl">7 Days to Die</span><!--
+                     --><span class="wr md-wdt-per50 txtr" id="timer_sevendaystodie">00:00:00</span>
+                    </h1>
+                </header>
+                <div class="wr dib-chd">
+                    <div class="wr wdt-per30 vam txtc"><img id="status_sevendaystodie" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
+                --><div class="wr wdt-per70 vam">
+                        <br>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p  id="cpu_sevendaystodie" class="wr txtc vam">0%</p></div><!--
+                             --><div class="wr wdt-per70 vam db-chd">
+                                    <div class="bg-vd3 wr ht-px32 wdt-per100"><div id="cpu_sevendaystodie_percent" class="bg-rd1 wr ht-px32 wdt-per0"></div></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="mem_sevendaystodie" class="wr txtc vam">0%</p></div><!--
+                             --><div class="wr wdt-per70 vam db-chd">
+                                    <div class="bg-vd3 wr ht-px32 wdt-per100"><div id="mem_sevendaystodie_percent" class="bg-rd1 wr ht-px32 wdt-per0"></div></div>
+                                </div>
+                            </div>
+                        </article>
+                        <br>
+                    </div>
+                </div>
+            </section>  
+
         </div>
+
+        
 
         <footer class="cl-bl5 wr txtc mrgt-px10">
             <p>onestaufond.fr&nbsp;&copy;&nbsp;Gyn</p>
@@ -267,6 +307,7 @@
                 getStatus("server");
                 getStatus("onestaufond", 500);
                 getStatus("teamspeak3", 32);
+                getStatus("sevendaystodie", 8);
     
                 var by = 15;
                 var diff_ok = by * 60 - 5
