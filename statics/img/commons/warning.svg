@@ -37,7 +37,7 @@
          offset="0"
          id="stop3159" />
       <stop
-         style="stop-color:#ff0000;stop-opacity:1;"
+         style="stop-color:#7f7f7f;stop-opacity:1;"
          offset="1"
          id="stop3161" />
     </linearGradient>
@@ -145,7 +145,7 @@
        transform="matrix(1.0306123,0,0,1.0306123,-11.565216,-13.166579)" />
     <path
        sodipodi:type="arc"
-       style="opacity:1;fill:#bfbfbf;fill-opacity:1;stroke:none;stroke-width:0.20000000000000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.20000000000000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path2383"
        sodipodi:cx="377.79706"
        sodipodi:cy="430.10822"
