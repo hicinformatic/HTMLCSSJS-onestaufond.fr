@@ -129,7 +129,7 @@
                                     <div class="bg-vd3 wr ht-px32 wdt-per100 ofhide"><div id="user_teamspeak3_percent" class="bg-rd1 wr ht-px32 wdt-per0"></div></div>
                                 </div>
                             </div>
-                            <div class="bd-bd3 cl-bd5 wr mrgt-px5 wdt-per90 md-padl-per20 txtc">
+                            <div id="user_teamspeak3_full" class="bd-bd3 cl-bd5 wr mrgt-px5 wdt-per90 md-padl-per20 txtc dn">
                                 <label for="user_teamspeak3_input" class="bg-bl4 wr db lh-px20">Voir les utilisateurs connectés</label>
                                 <input type="checkbox" id="user_teamspeak3_input" class="wr dn dsc">
                                 <div id="user_teamspeak3_list" class="bg-bl5 wr md-dib-chd rvs-sm-db-chd md-wdt-per25-chd"></div>
@@ -182,7 +182,7 @@
                                     <div class="bg-vd3 wr ht-px32 wdt-per100 ofhide"><div id="user_sevendaystodie_percent" class="bg-rd1 wr ht-px32 wdt-per0"></div></div>
                                 </div>
                             </div>
-                            <div class="bd-bd3 cl-bd5 wr mrgt-px5 wdt-per90 md-padl-per20 txtc">
+                            <div id="user_sevendaystodie_full" class="bd-bd3 cl-bd5 wr mrgt-px5 wdt-per90 md-padl-per20 txtc dn">
                                 <label for="user_sevendaystodie_input" class="bg-bl4 wr db lh-px20">Voir les utilisateurs connectés</label>
                                 <input type="checkbox" id="user_sevendaystodie_input" class="wr dn dsc">
                                 <div id="user_sevendaystodie_list" class="bg-bl5 wr md-dib-chd rvs-sm-db-chd md-wdt-per25-chd"></div>
@@ -251,15 +251,18 @@
     
                 function setUsers(url, divider, users) {
                     var number = users.length;
-                    document.getElementById("user_" + url).innerHTML = number + "/" + divider;
-                    document.getElementById("user_" + url + "_percent").style.width = Math.round(number / divider * 100) + "%";
-                    var userlist = document.getElementById("user_" + url + "_list");
-                    userlist.innerHTML = "";
-                    users.forEach(function (user) {
-                        var newel = document.createElement("span");
-                        newel.innerHTML = user;
-                        userlist.appendChild(newel);
-                    });
+                    if (number > 0) {
+                        document.getElementById("user_" + url + "_full").style.display = "block";
+                        document.getElementById("user_" + url).innerHTML = number + "/" + divider;
+                        document.getElementById("user_" + url + "_percent").style.width = Math.round(number / divider * 100) + "%";
+                        var userlist = document.getElementById("user_" + url + "_list");
+                        userlist.innerHTML = "";
+                        users.forEach(function (user) {
+                            var newel = document.createElement("span");
+                            newel.innerHTML = user;
+                            userlist.appendChild(newel);
+                        });
+                    }
                     return number;
                 }
     
