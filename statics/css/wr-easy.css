@@ -21,6 +21,8 @@ h1, h2, h3, h4, h5, p, ul, li { margin: 0;}
 .wr.dib, .wr.dib-rcs *, .wr.dib-chd > * { display: inline-block; }
 .wr.dt,  .wr.dt-rcs  *, .wr.dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.ofscroll, .wr.ofscroll-rcs *, .wr.ofscroll-chd > * { overflow: scroll; }
+.wr.ofhide,   .wr.ofhide-rcs   *, .wr.ofhide-chd   > * { overflow: hidden; }
 .wr.ofxscroll, .wr.ofxscroll-rcs *, .wr.ofxscroll-chd > * { overflow-x: scroll; }
 .wr.ofyscroll, .wr.ofyscroll-rcs *, .wr.ofyscroll-chd > * { overflow-y: scroll; }
 .wr.ofxhide,   .wr.ofxhide-rcs   *, .wr.ofxhide-chd   > * { overflow-x: hidden; }
@@ -288,6 +290,8 @@ input[type="checkbox"].wr.dsc:not(:checked) ~ * { display: none; }
 .wr.lg-dib, .wr.lg-dib-rcs *, .wr.lg-dib-chd > * { display: inline-block; }
 .wr.lg-dt,  .wr.lg-dt-rcs  *, .wr.lg-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.lg-ofscroll, .wr.lg-ofscroll-rcs *, .wr.lg-ofscroll-chd > * { overflow: scroll; }
+.wr.lg-ofhide,   .wr.lg-ofhide-rcs   *, .wr.lg-ofhide-chd   > * { overflow: hidden; }
 .wr.lg-ofxscroll, .wr.lg-ofxscroll-rcs *, .wr.lg-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.lg-ofyscroll, .wr.lg-ofyscroll-rcs *, .wr.lg-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.lg-ofxhide,   .wr.lg-ofxhide-rcs   *, .wr.lg-ofxhide-chd   > * { overflow-x: hidden; }
@@ -555,6 +559,8 @@ input[type="checkbox"].wr.lg-dsc:not(:checked) ~ * { display: none; }
 .wr.md-dib, .wr.md-dib-rcs *, .wr.md-dib-chd > * { display: inline-block; }
 .wr.md-dt,  .wr.md-dt-rcs  *, .wr.md-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.md-ofscroll, .wr.md-ofscroll-rcs *, .wr.md-ofscroll-chd > * { overflow: scroll; }
+.wr.md-ofhide,   .wr.md-ofhide-rcs   *, .wr.md-ofhide-chd   > * { overflow: hidden; }
 .wr.md-ofxscroll, .wr.md-ofxscroll-rcs *, .wr.md-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.md-ofyscroll, .wr.md-ofyscroll-rcs *, .wr.md-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.md-ofxhide,   .wr.md-ofxhide-rcs   *, .wr.md-ofxhide-chd   > * { overflow-x: hidden; }
@@ -823,6 +829,8 @@ input[type="checkbox"].wr.md-dsc:not(:checked) ~ * { display: none; }
 .wr.sm-dib, .wr.sm-dib-rcs *, .wr.sm-dib-chd > * { display: inline-block; }
 .wr.sm-dt,  .wr.sm-dt-rcs  *, .wr.sm-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.sm-ofscroll, .wr.sm-ofscroll-rcs *, .wr.sm-ofscroll-chd > * { overflow: scroll; }
+.wr.sm-ofhide,   .wr.sm-ofhide-rcs   *, .wr.sm-ofhide-chd   > * { overflow: hidden; }
 .wr.sm-ofxscroll, .wr.sm-ofxscroll-rcs *, .wr.sm-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.sm-ofyscroll, .wr.sm-ofyscroll-rcs *, .wr.sm-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.sm-ofxhide,   .wr.sm-ofxhide-rcs   *, .wr.sm-ofxhide-chd   > * { overflow-x: hidden; }
@@ -1091,6 +1099,8 @@ input[type="checkbox"].wr.sm-dsc:not(:checked) ~ * { display: none; }
 .wr.xs-dib, .wr.xs-dib-rcs *, .wr.xs-dib-chd > * { display: inline-block; }
 .wr.xs-dt,  .wr.xs-dt-rcs  *, .wr.xs-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.xs-ofscroll, .wr.xs-ofscroll-rcs *, .wr.xs-ofscroll-chd > * { overflow: scroll; }
+.wr.xs-ofhide,   .wr.xs-ofhide-rcs   *, .wr.xs-ofhide-chd   > * { overflow: hidden; }
 .wr.xs-ofxscroll, .wr.xs-ofxscroll-rcs *, .wr.xs-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.xs-ofyscroll, .wr.xs-ofyscroll-rcs *, .wr.xs-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.xs-ofxhide,   .wr.xs-ofxhide-rcs   *, .wr.xs-ofxhide-chd   > * { overflow-x: hidden; }
@@ -1359,6 +1369,8 @@ input[type="checkbox"].wr.xs-dsc:not(:checked) ~ * { display: none; }
 .wr.rvs-xs-dib, .wr.rvs-xs-dib-rcs *, .wr.rvs-xs-dib-chd > * { display: inline-block; }
 .wr.rvs-xs-dt,  .wr.rvs-xs-dt-rcs  *, .wr.rvs-xs-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.rvs-xs-ofscroll, .wr.rvs-xs-ofscroll-rcs *, .wr.rvs-xs-ofscroll-chd > * { overflow: scroll; }
+.wr.rvs-xs-ofhide,   .wr.rvs-xs-ofhide-rcs   *, .wr.rvs-xs-ofhide-chd   > * { overflow: hidden; }
 .wr.rvs-xs-ofxscroll, .wr.rvs-xs-ofxscroll-rcs *, .wr.rvs-xs-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.rvs-xs-ofyscroll, .wr.rvs-xs-ofyscroll-rcs *, .wr.rvs-xs-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.rvs-xs-ofxhide,   .wr.rvs-xs-ofxhide-rcs   *, .wr.rvs-xs-ofxhide-chd   > * { overflow-x: hidden; }
@@ -1627,6 +1639,8 @@ input[type="checkbox"].wr.rvs-xs-dsc:not(:checked) ~ * { display: none; }
 .wr.rvs-sm-dib, .wr.rvs-sm-dib-rcs *, .wr.rvs-sm-dib-chd > * { display: inline-block; }
 .wr.rvs-sm-dt,  .wr.rvs-sm-dt-rcs  *, .wr.rvs-sm-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.rvs-sm-ofscroll, .wr.rvs-sm-ofscroll-rcs *, .wr.rvs-sm-ofscroll-chd > * { overflow: scroll; }
+.wr.rvs-sm-ofhide,   .wr.rvs-sm-ofhide-rcs   *, .wr.rvs-sm-ofhide-chd   > * { overflow: hidden; }
 .wr.rvs-sm-ofxscroll, .wr.rvs-sm-ofxscroll-rcs *, .wr.rvs-sm-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.rvs-sm-ofyscroll, .wr.rvs-sm-ofyscroll-rcs *, .wr.rvs-sm-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.rvs-sm-ofxhide,   .wr.rvs-sm-ofxhide-rcs   *, .wr.rvs-sm-ofxhide-chd   > * { overflow-x: hidden; }
@@ -1894,6 +1908,8 @@ input[type="checkbox"].wr.rvs-sm-dsc:not(:checked) ~ * { display: none; }
 .wr.rvs-md-dib, .wr.rvs-md-dib-rcs *, .wr.rvs-md-dib-chd > * { display: inline-block; }
 .wr.rvs-md-dt,  .wr.rvs-md-dt-rcs  *, .wr.rvs-md-dt-chd  > * { display: table;        }
 /* Overflow */
+.wr.rvs-md-ofscroll, .wr.rvs-md-ofscroll-rcs *, .wr.rvs-md-ofscroll-chd > * { overflow: scroll; }
+.wr.rvs-md-ofhide,   .wr.rvs-md-ofhide-rcs   *, .wr.rvs-md-ofhide-chd   > * { overflow: hidden; }
 .wr.rvs-md-ofxscroll, .wr.rvs-md-ofxscroll-rcs *, .wr.rvs-md-ofxscroll-chd > * { overflow-x: scroll; }
 .wr.rvs-md-ofyscroll, .wr.rvs-md-ofyscroll-rcs *, .wr.rvs-md-ofyscroll-chd > * { overflow-y: scroll; }
 .wr.rvs-md-ofxhide,   .wr.rvs-md-ofxhide-rcs   *, .wr.rvs-md-ofxhide-chd   > * { overflow-x: hidden; }
