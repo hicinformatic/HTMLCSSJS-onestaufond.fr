@@ -22,7 +22,7 @@
                 <p class="wr vam-chd"><img class="wr mh-px16" src="{% static 'img/commons/category.svg' %}" alt="{% trans 'Category' %}">&nbsp;{{ object.category }}</p><!--
              --><p class="wr vam-chd"><img class="wr mh-px16" src="{% static 'img/commons/date.svg' %}" alt="{% trans 'Category' %}">&nbsp;{{ object.date_create }}</p>
             </div><!--
-         --><div class="bg-vd1 wr md-wdt-per30 vam txtc"><a href="#" class="wr db cl-vd8">Lire la suite</a></div>
+         --><div class="bg-vd1 wr md-wdt-per30 vam txtc"><a href="{% url 'article-detail' object.id '.html' %}" class="wr db cl-vd8">Lire la suite</a></div>
         </div>
     </article>
     {% endfor %}
