@@ -1,0 +1,21 @@
+{% extends template %}{% load i18n static simplify %}{% block content %}
+
+<section class="wr mrgy-auto mrgy-auto-chd lg-wdt-per60 md-wdt-per80">
+    <h1 class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">{{ object.first_article.title }}</h1>
+    <br>
+    <div class="wr sm-dib-chd lh-px50-chd">
+        <div class="bg-vd2 wr sm-wdt-per100 vam sm-dib-chd sm-wdt-per50-chd txtc font12  rvs-xs-lh-px20">
+            <p class="wr vam-chd"><img class="wr mh-px16" src="{% static 'img/commons/category.svg' %}" alt="{% trans 'Category' %}">&nbsp;{{ object.category }}</p><!--
+            --><p class="wr vam-chd"><img class="wr mh-px16" src="{% static 'img/commons/date.svg' %}" alt="{% trans 'Category' %}">&nbsp;{{ object.date_create }}</p>
+        </div>
+    </div>
+    <div class="bg-bl3">
+        <div class="wr txtc">
+            <img class="wr mh-px150" src="{{ object.static_banner }}" alt="{{ object.first_article.title }}">
+        </div><!--
+        --><div class="bg-bl2 wr padx-px20 pady-px5" style="min-height: 150px;">
+            <p>{{ object.first_article.content }}</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
