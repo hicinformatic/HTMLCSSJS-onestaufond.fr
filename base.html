@@ -21,32 +21,15 @@
              --><div class="wr md-wdt-per70 rvs-md-txtc">
                     <section>
                         <h1>onestaufond.fr</h1>
-                        <a class="cl-bl6" href="/status.html">Status des services</a>
+                        <a class="cl-bl6" href="/status.html">{% trans 'Status des services' %}</a>
                     </section>
                 </div>
             </div>
         </header>
-        <br/>
         {% block content %}
         {% endblock %}
-        <script type="text/javascript">
-            //var xhr = new XMLHttpRequest();
-            //xhr.open("GET", "http://www.inrs.fr/rss/?feed=actualites", true);
-            //xhr.setRequestHeader("Cache-Control", "no-cache");
-            //xhr.setRequestHeader("Pragma", "no-cache");
-            //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-            //xhr.ontimeout = function() { alert('timeout'); }
-            //xhr.onerror = function() { alert("Error code " + this.status + " received: " + this.statusText); }
-            //xhr.onload = function() {
-            //    if (this.status >= 200 && this.status <= 399) {
-            //        if (xhr.responseText != null) {
-            //            alert(this.responseXML);
-            //        } else {
-            //            alert("Failed to receive RSS file from the server - file not found.");
-            //        }
-            //    }
-            //}
-            //xhr.send(null);
-        </script>
+        <footer class="wr mrgx-px20">
+            <p class="wr txtc cl-bl6">Gyn&nbsp;&copy;&nbsp;onestaufond.fr</p>
+        </footer>
     </body>
 </html>
