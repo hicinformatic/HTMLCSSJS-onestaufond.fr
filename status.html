@@ -295,6 +295,8 @@
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState === 4 && this.status === 200) {
+                            alert("deploy_" + own);
+                            alert(document.getElementById("deploy_" + own).className);
                             document.getElementById("deploy_" + own).className = "wr dib-chd";
                             var status = "off";
                             var datas = this.responseText;
