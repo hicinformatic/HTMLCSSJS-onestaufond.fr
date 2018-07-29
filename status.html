@@ -42,10 +42,10 @@
                     </div><!--
                  --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
                         <span class="wr md-wdt-per50 txtl">Serveur</span><!--
-                     --><span class="wr md-wdt-per50 txtr" id="timer_server">00:00:00</span>
+                     --><span class="wr md-wdt-per50 txtr" id="timer_server"><img class="wr mh-px30 vam" src="statics/img/commons/critical.svg" alt="Server down"></span>
                     </h1>
                 </header>
-                <div class="wr dib-chd">
+                <div id="deploy_server" class="wr dn">
                     <div class="wr wdt-per30 vam txtc"><img id="status_server" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
                  --><div class="wr wdt-per70 vam">
                         <br>
@@ -79,12 +79,12 @@
                     </div><!--
                  --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
                         <span class="wr md-wdt-per50 txtl">onestaufond.fr</span><!--
-                     --><span class="wr md-wdt-per50 txtr" id="timer_onestaufond">00:00:00</span>
+                     --><span class="wr md-wdt-per50 txtr" id="timer_onestaufond"><img class="wr mh-px30 vam" src="statics/img/commons/critical.svg" alt="Server down"></span>
                     </h1>
                 </header>
-                <div class="wr dib-chd">
+                <div id="deploy_onestaufond" class="wr dn">
                     <div class="wr wdt-per30 vam txtc"><img id="status_onestaufond" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
-                --><div class="wr wdt-per70 vam">
+                 --><div class="wr wdt-per70 vam">
                         <br>
                         <article>
                             <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
@@ -116,12 +116,12 @@
                     </div><!--
                  --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
                         <span class="wr md-wdt-per50 txtl">Teamspeak 3</span><!--
-                     --><span class="wr md-wdt-per50 txtr" id="timer_teamspeak3">00:00:00</span>
+                     --><span class="wr md-wdt-per50 txtr" id="timer_teamspeak3"><img class="wr mh-px30 vam" src="statics/img/commons/critical.svg" alt="Server down"></span>
                     </h1>
                 </header>
-                <div class="wr dib-chd">
+                <div id="deploy_teamspeak3" class="wr dn">
                     <div class="wr wdt-per30 vam txtc"><img id="status_teamspeak3" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
-                --><div class="wr wdt-per70 vam">
+                 --><div class="wr wdt-per70 vam">
                         <br>
                         <article>
                             <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
@@ -171,12 +171,12 @@
                     </div><!--
                  --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
                         <span class="wr md-wdt-per50 txtl">7 Days to Die</span><!--
-                     --><span class="wr md-wdt-per50 txtr" id="timer_sevendaystodie">00:00:00</span>
+                     --><span class="wr md-wdt-per50 txtr" id="timer_sevendaystodie"><img class="wr mh-px30 vam" src="statics/img/commons/critical.svg" alt="Server down"></span>
                     </h1>
                 </header>
-                <div class="wr dib-chd">
+                <div id="deploy_sevendaystodie" class="wr dn">
                     <div class="wr wdt-per30 vam txtc"><img id="status_sevendaystodie" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
-                --><div class="wr wdt-per70 vam">
+                 --><div class="wr wdt-per70 vam">
                         <br>
                         <article>
                             <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
@@ -295,6 +295,7 @@
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState === 4 && this.status === 200) {
+                            document.getElementById("deploy_" + own).className = "wr dib-chd";
                             var status = "off";
                             var datas = this.responseText;
                             datas = JSON.parse(datas);
@@ -333,6 +334,7 @@
                     xhttp.open("GET", "statics/" + url + ".json", true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
                     xhttp.overrideMimeType("application/json");
+                    xhttp.onerror = function () { };
                     xhttp.send();
                 }
     
