@@ -36,7 +36,7 @@
 
         <div class="wr mrgy-auto-chd mrgb-px10-chd">
             <section class="bg-bl2 wr md-wdt-per80">
-                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                <header id="global_server" class="bg-rd7 cl-bl5 wr pad-px9 dib-chd">
                     <div class="wr vam wdt-per5">
                         <img class="wr mh-px30 vam" src="statics/img/commons/server.png" alt="server">
                     </div><!--
@@ -73,7 +73,7 @@
             </section>
 
             <section class="bg-bl2 wr md-wdt-per80">
-                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                <header id="global_onestaufond" class="bg-rd7 cl-bl5 wr pad-px9 dib-chd">
                     <div class="wr vam wdt-per5">
                         <img class="wr mh-px30 vam" src="statics/img/logo.png" alt="server">
                     </div><!--
@@ -110,7 +110,7 @@
             </section>  
 
             <section class="bg-bl2 wr md-wdt-per80">
-                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                <header id="global_teamspeak3" class="bg-rd7 cl-bl5 wr pad-px9 dib-chd">
                     <div class="wr vam wdt-per5">
                         <img class="wr mh-px30 vam" src="statics/img/logos/teamspeak3.png" alt="server">
                     </div><!--
@@ -165,7 +165,7 @@
             </section>
 
             <section class="bg-bl2 wr md-wdt-per80">
-                <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
+                <header id="global_sevendaystodie" class="bg-rd7 cl-bl5 wr pad-px9 dib-chd">
                     <div class="wr vam wdt-per5">
                         <img class="wr mh-px30 mw-px30 vam" src="statics/img/logos/sevendaystodie.svg" alt="server">
                     </div><!--
@@ -295,6 +295,7 @@
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState === 4 && this.status === 200) {
+                            document.getElementById("global_" + url).className = "bg-bd6 cl-bl5 wr pad-px9 dib-chd";
                             document.getElementById("deploy_" + url).className = "wr dib-chd";
                             var status = "off";
                             var datas = this.responseText;
