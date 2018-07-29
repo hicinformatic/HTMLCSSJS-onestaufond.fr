@@ -26,15 +26,15 @@
                 </div>
             </div>
         </header>
-        <br/>
 
-        <div class="bg-bd5 cl-bl5 wr dib-rcs vam-rcs pad-px10 md-wdt-per80 mrgy-auto">
-            <img class="wr mh-px30" src="statics/img/commons/refresh.svg" alt="refresh"><!--
+        <br/>
+        <div class="bg-bl1 cl-bl5 wr dib-rcs vam-rcs pad-px10 md-wdt-per80 mrgy-auto">
+            <img class="wr mh-px30 anim rotate" src="statics/img/commons/refresh.svg" alt="refresh"><!--
          --><p class="wr wdt-per80">&nbsp;Rafraîchissement des données dans <span id="countNext"></span> secondes.</p>
         </div>
         <br>
 
-        <div class="wr mrgy-auto-chd mrgt-px10-chd">
+        <div class="wr mrgy-auto-chd mrgb-px10-chd">
             <section class="bg-bl2 wr md-wdt-per80">
                 <header class="bg-bd6 cl-bl5 wr pad-px9 dib-chd">
                     <div class="wr vam wdt-per5">
@@ -295,8 +295,6 @@
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState === 4 && this.status === 200) {
-                            alert("deploy_" + url);
-                            alert(document.getElementById("deploy_" + url).className);
                             document.getElementById("deploy_" + url).className = "wr dib-chd";
                             var status = "off";
                             var datas = this.responseText;
