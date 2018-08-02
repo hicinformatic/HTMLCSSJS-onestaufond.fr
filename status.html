@@ -332,7 +332,8 @@
                             document.getElementById("status_" + url).src = "statics/img/commons/" + status + ".svg";
                         }
                     };
-                    xhttp.open("GET", "statics/" + url + ".json", true);
+                    var date = Date.now()
+                    xhttp.open("GET", "statics/" + url + ".json?date=" + date, true);
                     xhttp.setRequestHeader("Content-Type", "application/json");
                     xhttp.overrideMimeType("application/json");
                     xhttp.onerror = function () { };
