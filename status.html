@@ -107,6 +107,43 @@
                         <br>
                     </div>
                 </div>
+            </section>
+
+            <section class="bg-bl2 wr md-wdt-per80">
+                <header id="global_database" class="bg-rd7 cl-bl5 wr pad-px9 dib-chd">
+                    <div class="wr vam wdt-per5">
+                        <img class="wr mh-px30 vam" src="statics/img/logo.png" alt="server">
+                    </div><!--
+                 --><h1 class="wr vam dib-chd wdt-per95 rvs-sm-db-chd rvs-sm-txtc-chd">
+                        <span class="wr md-wdt-per50 txtl">database.fr</span><!--
+                     --><span class="wr md-wdt-per50 txtr" id="timer_database"><img class="wr mh-px30 vam" src="statics/img/commons/critical.svg" alt="Server down"></span>
+                    </h1>
+                </header>
+                <div id="deploy_database" class="wr dn">
+                    <div class="wr wdt-per30 vam txtc"><img id="status_database" class="wr mh-px64" src="statics/img/commons/off.svg" alt="off"></div><!--
+                 --><div class="wr wdt-per70 vam">
+                        <br>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/cpu.png" alt="cpu">&nbsp;Processus</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p  id="cpu_database" class="wr txtc vam">0%</p></div><!--
+                             --><div class="wr wdt-per70 vam db-chd">
+                                    <div class="bg-vd3 wr ht-px32 wdt-per100 ofhide"><div id="cpu_database_percent" class="bg-rd1 wr ht-px32 wdt-per0"></div></div>
+                                </div>
+                            </div>
+                        </article>
+                        <article>
+                            <h2><img class="wr vam" src="statics/img/commons/memory.png" alt="memory">&nbsp;Mémoire</h2>
+                            <div class="wr dib-chd">
+                                <div class="wr wdt-per20"><p id="mem_database" class="wr txtc vam">0%</p></div><!--
+                             --><div class="wr wdt-per70 vam db-chd">
+                                    <div class="bg-vd3 wr ht-px32 wdt-per100 ofhide"><div id="mem_database_percent" class="bg-rd1 wr ht-px32 wdt-per0"></div></div>
+                                </div>
+                            </div>
+                        </article>
+                        <br>
+                    </div>
+                </div>
             </section>  
 
             <section class="bg-bl2 wr md-wdt-per80">
@@ -363,6 +400,7 @@
     
                 getStatus("server");
                 getStatus("onestaufond", 500);
+                getStatus("database", 500);
                 getStatus("teamspeak3", 32);
                 getStatus("sevendaystodie", 8);
     
